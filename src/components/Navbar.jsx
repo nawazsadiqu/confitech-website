@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+
+import "../styles/navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,72 +10,131 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
+
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const closeMenu = () => setMenuOpen(false);
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
-      <div className="container navbar-container">
-        
-        <Link to="/" className="brand" onClick={closeMenu}>
-          <span className="brand-text">
-            Confi<span>tech</span>
-          </span>
-        </Link>
+    <header
+      className={`site-header ${
+        scrolled ? "site-header-scrolled" : ""
+      }`}
+    >
+      <div className="container site-header-inner">
 
-        <nav className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
-          <Link to="/" onClick={closeMenu}>
+        {/* LOGO */}
+        <NavLink
+          to="/"
+          className="site-logo"
+          onClick={closeMenu}
+          aria-label="Confitech Home"
+        >
+          <img
+            src="/images/confitech-logo.png"
+            alt="Confitech"
+          />
+        </NavLink>
+
+
+        {/* NAVIGATION */}
+        <nav
+          className={`site-navigation ${
+            menuOpen ? "is-open" : ""
+          }`}
+        >
+          <NavLink to="/" onClick={closeMenu}>
             Home
-          </Link>
+          </NavLink>
 
-          <Link to="/about" onClick={closeMenu}>
+          <NavLink to="/about" onClick={closeMenu}>
             About
-          </Link>
+          </NavLink>
 
-          <Link to="/services" onClick={closeMenu}>
+          <NavLink to="/services" onClick={closeMenu}>
             Services
-          </Link>
+          </NavLink>
 
-          <Link to="/products" onClick={closeMenu}>
+          <NavLink to="/products" onClick={closeMenu}>
             Products
-          </Link>
+          </NavLink>
 
-          <Link to="/portfolio" onClick={closeMenu}>
+          <NavLink to="/portfolio" onClick={closeMenu}>
             Portfolio
-          </Link>
+          </NavLink>
 
-          <Link to="/partners" onClick={closeMenu}>
+          <NavLink to="/partners" onClick={closeMenu}>
             Partners
-          </Link>
+          </NavLink>
 
-          <Link to="/contact" onClick={closeMenu}>
+          <NavLink to="/contact" onClick={closeMenu}>
             Contact
-          </Link>
+          </NavLink>
         </nav>
 
-        <div className="navbar-actions">
-          <Link to="/contact" className="navbar-cta">
+
+        {/* ACTIONS */}
+        <div className="site-header-actions">
+
+          <NavLink
+            to="/contact"
+            className="site-header-cta"
+            onClick={closeMenu}
+          >
             Get in Touch
-            <ArrowUpRight size={17} />
-          </Link>
+            <ArrowUpRight size={15} strokeWidth={2} />
+          </NavLink>
 
           <button
-            className="menu-button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle navigation"
+            type="button"
+            className="site-menu-button"
+            aria-label={
+              menuOpen ? "Close navigation" : "Open navigation"
+            }
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((prev) => !prev)}
           >
-            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+            {menuOpen ? (
+              <X size={23} strokeWidth={1.8} />
+            ) : (
+              <Menu size={23} strokeWidth={1.8} />
+            )}
           </button>
+
         </div>
 
       </div>
+
+
+      {/* MOBILE OVERLAY */}
+      {menuOpen && (
+        <button
+          type="button"
+          className="site-menu-overlay"
+          aria-label="Close navigation"
+          onClick={closeMenu}
+        />
+      )}
+
     </header>
   );
 };

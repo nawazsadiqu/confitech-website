@@ -1,5 +1,14 @@
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Mail,
+  Phone,
+} from "lucide-react";
+
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import "../styles/finalCta.css";
+
 
 const FinalCTA = () => {
   return (
@@ -9,44 +18,88 @@ const FinalCTA = () => {
 
         <motion.div
           className="final-cta-wrapper"
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1],
+          }}
         >
 
-          <div className="cta-decoration cta-decoration-one"></div>
-          <div className="cta-decoration cta-decoration-two"></div>
+          {/* DECORATION */}
+          <div className="final-cta-lines" />
+          <div className="final-cta-dots final-cta-dots-left" />
+          <div className="final-cta-dots final-cta-dots-right" />
+
+
+          {/* ================================================= */}
+          {/* LEFT CONTENT                                      */}
+          {/* ================================================= */}
 
           <div className="final-cta-content">
 
-            <span className="cta-label">
-              LET'S WORK TOGETHER
+            <span className="final-cta-label">
+              LET&apos;S WORK TOGETHER
             </span>
+
+
+            <div className="final-cta-label-line" />
+
 
             <h2>
               Ready to build a better
-              <span> technology environment?</span>
+              <span>
+                technology environment
+                <b>?</b>
+              </span>
             </h2>
 
-            <p>
+
+            <p className="final-cta-description">
               Talk to Confitech about your networking, data centre,
               security, infrastructure and technology requirements.
             </p>
 
+
             <div className="final-cta-actions">
 
-              <a href="/contact" className="cta-primary-button">
+              <Link
+                to="/contact"
+                className="final-cta-primary"
+              >
                 Discuss Your Requirement
-                <ArrowUpRight size={18} />
-              </a>
+
+                <span>
+                  <ArrowUpRight
+                    size={18}
+                    strokeWidth={2}
+                  />
+                </span>
+              </Link>
+
 
               <a
                 href="mailto:contact@confitech.co"
-                className="cta-contact-link"
+                className="final-cta-email"
               >
-                <Mail size={18} />
-                contact@confitech.co
+                <Mail
+                  size={18}
+                  strokeWidth={1.8}
+                />
+
+                <span>
+                  contact@confitech.co
+                </span>
               </a>
 
             </div>
@@ -54,23 +107,62 @@ const FinalCTA = () => {
           </div>
 
 
-          <div className="cta-side">
+          {/* ================================================= */}
+          {/* DIVIDER                                           */}
+          {/* ================================================= */}
 
-            <div className="cta-side-card">
+          <div className="final-cta-divider" />
 
-              <div className="cta-phone-icon">
-                <Phone size={25} />
-              </div>
 
-              <span>Talk to our team</span>
+          {/* ================================================= */}
+          {/* RIGHT PHONE PANEL                                  */}
+          {/* ================================================= */}
 
-              <a href="tel:+96824613022">
-                +968 24613022
-              </a>
+          <motion.div
+            className="final-cta-contact"
+            initial={{
+              opacity: 0,
+              x: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.25,
+            }}
+            transition={{
+              duration: 0.7,
+              delay: 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          >
 
+            <div className="final-cta-phone-icon">
+              <Phone
+                size={30}
+                strokeWidth={1.7}
+              />
             </div>
 
-          </div>
+
+            <span className="final-cta-contact-label">
+              Talk to our team
+            </span>
+
+
+            <div className="final-cta-phone-line" />
+
+
+            <a
+              href="tel:+96824613022"
+              className="final-cta-phone"
+            >
+              +968 24613022
+            </a>
+
+          </motion.div>
 
         </motion.div>
 
@@ -79,5 +171,6 @@ const FinalCTA = () => {
     </section>
   );
 };
+
 
 export default FinalCTA;

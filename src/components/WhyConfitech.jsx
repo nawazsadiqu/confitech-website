@@ -7,6 +7,9 @@ import {
 
 import { motion } from "framer-motion";
 
+import "../styles/whyConfitech.css";
+
+
 const reasons = [
   {
     number: "01",
@@ -15,6 +18,7 @@ const reasons = [
     description:
       "Practical expertise across networking, infrastructure, security and enterprise technology environments.",
   },
+
   {
     number: "02",
     icon: Settings,
@@ -22,6 +26,7 @@ const reasons = [
     description:
       "From planning and implementation to support, Confitech helps manage the complete technology lifecycle.",
   },
+
   {
     number: "03",
     icon: Handshake,
@@ -29,6 +34,7 @@ const reasons = [
     description:
       "Technology solutions supported by established products, brands and solution partners.",
   },
+
   {
     number: "04",
     icon: ShieldCheck,
@@ -38,77 +44,208 @@ const reasons = [
   },
 ];
 
+
 const WhyConfitech = () => {
   return (
     <section className="why-section">
 
-      <div className="container">
+      {/* BACKGROUND DECORATION */}
+      <div className="why-bg-lines" />
+      <div className="why-bg-dots" />
+
+
+      <div className="container why-container">
+
+        {/* ================================================= */}
+        {/* HEADER                                            */}
+        {/* ================================================= */}
 
         <div className="why-heading">
 
+          {/* LEFT */}
+
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
+            className="why-heading-left"
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.25,
+            }}
+            transition={{
+              duration: 0.65,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
-            <span className="section-label">WHY CONFITECH</span>
+
+            <span className="why-label">
+              WHY CONFITECH
+            </span>
+
+
+            <div className="why-heading-line" />
+
 
             <h2>
-              Technology expertise you can
-              <span> rely on.</span>
+              Technology expertise
+              <span>
+                you can <b>rely on.</b>
+              </span>
             </h2>
+
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: 0.1 }}
+
+          {/* RIGHT */}
+
+          <motion.div
+            className="why-heading-right"
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.25,
+            }}
+            transition={{
+              duration: 0.65,
+              delay: 0.1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
-            We focus on practical, dependable technology solutions that help
-            businesses create secure, connected and efficient infrastructure.
-          </motion.p>
+
+            <div className="why-heading-divider" />
+
+            <p>
+              We focus on practical, dependable technology
+              solutions that help businesses create secure,
+              connected and efficient infrastructure.
+            </p>
+
+          </motion.div>
 
         </div>
 
 
-        <div className="why-grid">
+        {/* ================================================= */}
+        {/* TIMELINE                                          */}
+        {/* ================================================= */}
 
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon;
+        <div className="why-timeline">
 
-            return (
-              <motion.div
-                className="why-card"
-                key={reason.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.08,
-                }}
-              >
-                <div className="why-card-top">
+          {/* MAIN DESKTOP LINE */}
 
-                  <span className="why-number">
-                    {reason.number}
-                  </span>
+          <motion.div
+            className="why-timeline-line"
+            initial={{
+              scaleX: 0,
+            }}
+            whileInView={{
+              scaleX: 1,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          />
 
-                  <div className="why-icon">
-                    <Icon size={24} strokeWidth={1.8} />
+
+          <div className="why-timeline-grid">
+
+            {reasons.map((reason, index) => {
+
+              const Icon = reason.icon;
+
+              return (
+
+                <motion.article
+                  className="why-timeline-item"
+                  key={reason.number}
+                  initial={{
+                    opacity: 0,
+                    y: 25,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.2,
+                  }}
+                  transition={{
+                    duration: 0.55,
+                    delay: 0.1 + index * 0.1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+
+                  {/* DOT */}
+
+                  <div className="why-timeline-dot">
+                    <span />
                   </div>
 
-                </div>
 
-                <h3>{reason.title}</h3>
+                  {/* NUMBER */}
 
-                <p>{reason.description}</p>
+                  <div className="why-number">
+                    {reason.number}
+                  </div>
 
-              </motion.div>
-            );
-          })}
+
+                  <div className="why-number-line" />
+
+
+                  {/* ICON */}
+
+                  <div className="why-icon">
+                    <Icon
+                      size={31}
+                      strokeWidth={1.7}
+                    />
+                  </div>
+
+
+                  {/* CONTENT */}
+
+                  <div className="why-item-content">
+
+                    <h3>
+                      {reason.title}
+                    </h3>
+
+
+                    <div className="why-title-line" />
+
+
+                    <p>
+                      {reason.description}
+                    </p>
+
+                  </div>
+
+                </motion.article>
+
+              );
+            })}
+
+          </div>
 
         </div>
 
@@ -117,5 +254,6 @@ const WhyConfitech = () => {
     </section>
   );
 };
+
 
 export default WhyConfitech;

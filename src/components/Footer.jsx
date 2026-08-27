@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
+import "../styles/footer.css";
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
           <div className="footer-brand">
 
             <Link to="/" className="footer-logo">
-              Confi<span>tech</span>
+              <img src="/images/confitech-logo.png" alt="Confitech"/>
             </Link>
 
             <p>

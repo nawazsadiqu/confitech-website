@@ -8,13 +8,16 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import "../styles/services.css";
 
 
 const services = [
   {
     number: "01",
     icon: Network,
-    image: "/images/service-structured-cabling.png",
+    image: "/images/services/structured-cabling-light.png",
     title: "Structured Cabling",
     description:
       "Reliable structured cabling and network infrastructure designed for performance, scalability and long-term efficiency.",
@@ -23,7 +26,7 @@ const services = [
   {
     number: "02",
     icon: Server,
-    image: "/images/hero-data-center.png",
+    image: "/images/services/data-center-light.png",
     title: "Data Center Solutions",
     description:
       "Infrastructure and technology solutions for building dependable, secure and efficient data centre environments.",
@@ -32,7 +35,7 @@ const services = [
   {
     number: "03",
     icon: ShieldCheck,
-    image: "/images/service-security.png",
+    image: "/images/services/security-light.png",
     title: "CCTV & Access Control",
     description:
       "Integrated surveillance and access control solutions that help businesses protect people, premises and critical assets.",
@@ -41,7 +44,7 @@ const services = [
   {
     number: "04",
     icon: BriefcaseBusiness,
-    image: "/images/service-it-consulting.png",
+    image: "/images/services/it-consulting-light.png",
     title: "IT Consulting",
     description:
       "Professional consulting across networking, information security, operating systems and enterprise IT infrastructure.",
@@ -50,7 +53,7 @@ const services = [
   {
     number: "05",
     icon: CloudCog,
-    image: "/images/service-cloud-support.png",
+    image: "/images/services/cloud-support-light.png",
     title: "Cloud Support Services",
     description:
       "Reliable remote infrastructure management and cloud support services designed to keep your technology operating smoothly.",
@@ -64,54 +67,92 @@ const ServicesSection = () => {
       className="services-section"
       id="services"
     >
+      {/* BACKGROUND TECH DECORATION */}
+      <div className="services-background-lines" />
 
-      <div className="container">
 
-        {/* ============================= */}
-        {/* HEADING                       */}
-        {/* ============================= */}
+      <div className="container services-container">
+
+        {/* ================================================= */}
+        {/* HEADING                                           */}
+        {/* ================================================= */}
 
         <div className="services-heading">
 
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
+            className="services-heading-left"
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{
+              duration: 0.65,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
 
-            <span className="section-label">
+            <span className="services-label">
               OUR EXPERTISE
             </span>
 
+
             <h2>
               Technology solutions built around
-              <span> your infrastructure.</span>
+              <span>
+                your infrastructure
+                <b>.</b>
+              </span>
             </h2>
+
+
+            <div className="services-heading-line" />
 
           </motion.div>
 
 
-          <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <motion.div
+            className="services-heading-right"
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
             transition={{
-              duration: 0.55,
+              duration: 0.65,
               delay: 0.1,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
-            From connectivity and data centres to security and cloud support,
-            Confitech provides practical technology solutions designed around
-            real business requirements.
-          </motion.p>
+
+            <p>
+              From connectivity and data centres to security and cloud
+              support, Confitech provides practical technology solutions
+              designed around real business requirements.
+            </p>
+
+          </motion.div>
 
         </div>
 
 
-        {/* ============================= */}
-        {/* SERVICES GRID                 */}
-        {/* ============================= */}
+        {/* ================================================= */}
+        {/* SERVICE CARDS                                     */}
+        {/* ================================================= */}
 
         <div className="services-grid">
 
@@ -121,13 +162,12 @@ const ServicesSection = () => {
 
             return (
 
-              <motion.a
-                href="/services"
+              <motion.article
                 className="service-card"
                 key={service.title}
                 initial={{
                   opacity: 0,
-                  y: 35,
+                  y: 30,
                 }}
                 whileInView={{
                   opacity: 1,
@@ -135,11 +175,12 @@ const ServicesSection = () => {
                 }}
                 viewport={{
                   once: true,
-                  amount: 0.2,
+                  amount: 0.15,
                 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.55,
                   delay: index * 0.07,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
               >
 
@@ -150,57 +191,62 @@ const ServicesSection = () => {
                   <img
                     src={service.image}
                     alt={service.title}
+                    loading="lazy"
                   />
 
-                  <div className="service-image-overlay"></div>
+                  <div className="service-card-image-fade" />
+
+                </div>
 
 
-                  <div className="service-card-top">
+                {/* ICON + NUMBER */}
 
-                    <div className="service-icon">
-                      <Icon
-                        size={23}
-                        strokeWidth={1.8}
-                      />
-                    </div>
+                <div className="service-card-meta">
 
-                    <span className="service-number">
-                      {service.number}
-                    </span>
-
+                  <div className="service-icon">
+                    <Icon
+                      size={24}
+                      strokeWidth={1.7}
+                    />
                   </div>
+
+
+                  <span className="service-number">
+                    {service.number}
+                  </span>
 
                 </div>
 
 
                 {/* CONTENT */}
 
-                <div className="service-card-body">
+                <div className="service-card-content">
 
-                  <div className="service-content">
-
-                    <h3>
-                      {service.title}
-                    </h3>
-
-                    <p>
-                      {service.description}
-                    </p>
-
-                  </div>
+                  <h3>
+                    {service.title}
+                  </h3>
 
 
-                  <div className="service-card-link">
+                  <p>
+                    {service.description}
+                  </p>
 
+
+                  <Link
+                    to="/services"
+                    className="service-card-link"
+                  >
                     Explore Service
 
-                    <ArrowUpRight size={18} />
-
-                  </div>
+                    <ArrowUpRight
+                      size={16}
+                      strokeWidth={2}
+                    />
+                  </Link>
 
                 </div>
 
-              </motion.a>
+              </motion.article>
 
             );
           })}
@@ -208,7 +254,6 @@ const ServicesSection = () => {
         </div>
 
       </div>
-
     </section>
   );
 };

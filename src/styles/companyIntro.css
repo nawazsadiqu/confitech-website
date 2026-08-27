@@ -1,0 +1,939 @@
+/* ===================================================== */
+/* COMPANY INTRO                                         */
+/* ===================================================== */
+
+.company-intro {
+  position: relative;
+
+  width: 100%;
+
+  padding: 115px 0 90px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 6% 82%,
+      rgba(46, 204, 113, 0.085),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 94% 8%,
+      rgba(46, 204, 113, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfdfc 52%,
+      #ffffff 100%
+    );
+}
+
+
+/* ===================================================== */
+/* LARGE WATERMARK                                       */
+/* ===================================================== */
+
+.company-intro-watermark {
+  position: absolute;
+
+  top: 6px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  color:
+    rgba(30, 37, 34, 0.043);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(115px, 15vw, 220px);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -10px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* ===================================================== */
+/* MAIN LAYOUT                                           */
+/* ===================================================== */
+
+.company-intro-container {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.85fr);
+
+  gap: 120px;
+
+  align-items: start;
+}
+
+
+/* ===================================================== */
+/* LEFT SIDE                                             */
+/* ===================================================== */
+
+.company-intro-left {
+  width: 100%;
+}
+
+
+/* LABEL */
+
+.company-intro-label {
+  display: inline-block;
+
+  margin-bottom: 23px;
+
+  color:
+    var(--primary-dark);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* ===================================================== */
+/* HEADING                                               */
+/* ===================================================== */
+
+.company-intro-left h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color:
+    #20262b;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(49px, 4.5vw, 66px);
+
+  font-weight: 700;
+
+  line-height: 1.03;
+
+  letter-spacing: -3.7px;
+}
+
+
+.company-intro-left h2 > span {
+  display: block;
+}
+
+
+.company-intro-left h2 b {
+  color:
+    var(--primary);
+
+  font-weight: inherit;
+}
+
+
+/* GREEN LINE */
+
+.company-intro-green-line {
+  width: 54px;
+  height: 3px;
+
+  margin-top: 30px;
+
+  border-radius: 100px;
+
+  background:
+    var(--primary);
+}
+
+
+/* ===================================================== */
+/* STAT CARD                                             */
+/* ===================================================== */
+
+.company-intro-stat-card {
+  width: min(100%, 545px);
+
+  min-height: 132px;
+
+  margin-top: 43px;
+
+  padding: 26px 31px;
+
+  display: grid;
+
+  grid-template-columns:
+    68px
+    auto
+    1px
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 23px;
+
+  border:
+    1px solid
+    rgba(32, 37, 42, 0.07);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 14px 40px
+    rgba(35, 50, 42, 0.055);
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.company-intro-stat-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(46, 204, 113, 0.2);
+
+  box-shadow:
+    0 20px 48px
+    rgba(35, 50, 42, 0.085);
+}
+
+
+/* ICON */
+
+.company-intro-stat-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color:
+    var(--primary-dark);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(46, 204, 113, 0.13),
+      rgba(46, 204, 113, 0.045)
+    );
+}
+
+
+/* NUMBER */
+
+.company-intro-stat-number {
+  color:
+    var(--primary);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 48px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+/* DIVIDER */
+
+.company-intro-stat-divider {
+  width: 1px;
+  height: 45px;
+
+  background:
+    rgba(32, 37, 42, 0.12);
+}
+
+
+/* CONTENT */
+
+.company-intro-stat-content {
+  min-width: 0;
+}
+
+
+.company-intro-stat-content strong {
+  display: block;
+
+  color:
+    var(--heading);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+.company-intro-stat-content p {
+  margin-top: 9px;
+
+  color:
+    var(--text);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* ===================================================== */
+/* RIGHT SIDE                                            */
+/* ===================================================== */
+
+.company-intro-right {
+  width: 100%;
+
+  max-width: 530px;
+
+  padding-top: 45px;
+}
+
+
+/* MAIN PARAGRAPH */
+
+.company-intro-lead {
+  margin: 0;
+
+  color:
+    #3f4b45;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.85;
+}
+
+
+/* SECOND PARAGRAPH */
+
+.company-intro-description {
+  margin-top: 28px;
+
+  color:
+    #606c66;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ===================================================== */
+/* DISCOVER LINK                                         */
+/* ===================================================== */
+
+.company-intro-link {
+  position: relative;
+
+  width: fit-content;
+
+  margin-top: 34px;
+
+  padding-bottom: 6px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color:
+    var(--primary-dark);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.company-intro-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    rgba(46, 204, 113, 0.65);
+}
+
+
+.company-intro-link svg {
+  transition:
+    transform 0.25s ease;
+}
+
+
+.company-intro-link:hover {
+  gap: 15px;
+
+  color:
+    #159c50;
+}
+
+
+.company-intro-link:hover svg {
+  transform:
+    translateX(3px);
+}
+
+
+/* ===================================================== */
+/* CAPABILITY STRIP                                      */
+/* ===================================================== */
+
+.company-capabilities {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  margin-top: 60px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(32, 37, 42, 0.07);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 12px 36px
+    rgba(34, 50, 41, 0.045);
+}
+
+
+/* ===================================================== */
+/* CAPABILITY ITEM                                       */
+/* ===================================================== */
+
+.company-capability {
+  position: relative;
+
+  min-height: 145px;
+
+  padding: 25px 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-right:
+    1px solid
+    rgba(32, 37, 42, 0.08);
+
+  transition:
+    background 0.25s ease;
+}
+
+
+.company-capability:last-child {
+  border-right: 0;
+}
+
+
+.company-capability:hover {
+  background:
+    rgba(46, 204, 113, 0.025);
+}
+
+
+/* NUMBER */
+
+.company-capability-number {
+  width: 54px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color:
+    var(--primary-dark);
+
+  background:
+    rgba(46, 204, 113, 0.08);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 26px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+
+/* TITLE */
+
+.company-capability strong {
+  margin-top: 14px;
+
+  color:
+    var(--heading);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* GREEN MICRO LINE */
+
+.company-capability-line {
+  width: 36px;
+  height: 2px;
+
+  margin-top: 13px;
+
+  border-radius: 100px;
+
+  background:
+    var(--primary);
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.company-capability:hover
+.company-capability-line {
+  width: 48px;
+}
+
+
+/* ===================================================== */
+/* TABLET                                                */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+
+  .company-intro {
+    padding:
+      95px 0
+      75px;
+  }
+
+
+  /* WATERMARK */
+
+  .company-intro-watermark {
+    top: 25px;
+
+    font-size:
+      clamp(90px, 17vw, 145px);
+
+    letter-spacing: -6px;
+  }
+
+
+  /* MAIN GRID */
+
+  .company-intro-container {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .company-intro-left {
+    max-width: 690px;
+  }
+
+
+  .company-intro-right {
+    max-width: 660px;
+
+    padding-top: 0;
+  }
+
+
+  .company-intro-left h2 {
+    max-width: 630px;
+
+    font-size:
+      clamp(46px, 7vw, 60px);
+  }
+
+
+  /* CAPABILITIES */
+
+  .company-capabilities {
+    grid-template-columns:
+      repeat(5, 180px);
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+
+  .company-capabilities::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .company-capability {
+    min-height: 130px;
+  }
+
+}
+
+
+/* ===================================================== */
+/* MOBILE                                                */
+/* ===================================================== */
+
+@media (max-width: 600px) {
+
+  .company-intro {
+    padding:
+      72px 0
+      55px;
+
+    background:
+      radial-gradient(
+        circle at 0% 85%,
+        rgba(46, 204, 113, 0.07),
+        transparent 36%
+      ),
+      radial-gradient(
+        circle at 100% 8%,
+        rgba(46, 204, 113, 0.06),
+        transparent 38%
+      ),
+      #ffffff;
+  }
+
+
+  /* =================================================== */
+  /* WATERMARK                                           */
+  /* =================================================== */
+
+  .company-intro-watermark {
+    top: 20px;
+
+    left: 18px;
+
+    width: auto;
+
+    transform: none;
+
+    color:
+      rgba(30, 37, 34, 0.038);
+
+    font-size: 78px;
+
+    letter-spacing: -4px;
+
+    text-align: left;
+  }
+
+
+  /* =================================================== */
+  /* GRID                                                */
+  /* =================================================== */
+
+  .company-intro-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  /* =================================================== */
+  /* LABEL                                               */
+  /* =================================================== */
+
+  .company-intro-label {
+    margin-bottom: 15px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+
+  /* =================================================== */
+  /* HEADING                                             */
+  /* =================================================== */
+
+  .company-intro-left h2 {
+    max-width: 350px;
+
+    font-size:
+      clamp(38px, 11vw, 47px);
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .company-intro-green-line {
+    width: 42px;
+    height: 3px;
+
+    margin-top: 20px;
+  }
+
+
+  /* =================================================== */
+  /* STAT CARD                                           */
+  /* =================================================== */
+
+  .company-intro-stat-card {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-top: 30px;
+
+    padding: 19px;
+
+    grid-template-columns:
+      50px
+      auto
+      minmax(0, 1fr);
+
+    gap: 13px;
+
+    border-radius: 9px;
+  }
+
+
+  .company-intro-stat-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 9px;
+  }
+
+
+  .company-intro-stat-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .company-intro-stat-number {
+    font-size: 36px;
+  }
+
+
+  .company-intro-stat-divider {
+    display: none;
+  }
+
+
+  .company-intro-stat-content {
+    padding-left: 12px;
+
+    border-left:
+      1px solid
+      rgba(32, 37, 42, 0.1);
+  }
+
+
+  .company-intro-stat-content strong {
+    font-size: 12px;
+  }
+
+
+  .company-intro-stat-content p {
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    line-height: 1.45;
+  }
+
+
+  /* =================================================== */
+  /* RIGHT CONTENT                                       */
+  /* =================================================== */
+
+  .company-intro-right {
+    max-width: none;
+
+    padding-top: 0;
+  }
+
+
+  .company-intro-lead {
+    font-size: 14px;
+
+    line-height: 1.72;
+  }
+
+
+  .company-intro-description {
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    line-height: 1.72;
+  }
+
+
+  .company-intro-link {
+    margin-top: 23px;
+
+    font-size: 11px;
+  }
+
+
+  /* =================================================== */
+  /* CAPABILITIES                                        */
+  /* =================================================== */
+
+  .company-capabilities {
+    margin-top: 42px;
+
+    grid-template-columns:
+      repeat(5, 145px);
+
+    border-radius: 8px;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x proximity;
+
+    scrollbar-width: none;
+  }
+
+
+  .company-capabilities::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .company-capability {
+    min-height: 115px;
+
+    padding: 18px 12px;
+
+    scroll-snap-align: start;
+  }
+
+
+  .company-capability-number {
+    width: 45px;
+    height: 43px;
+
+    border-radius: 8px;
+
+    font-size: 21px;
+  }
+
+
+  .company-capability strong {
+    margin-top: 11px;
+
+    font-size: 10px;
+  }
+
+
+  .company-capability-line {
+    width: 29px;
+
+    margin-top: 9px;
+  }
+
+}

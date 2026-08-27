@@ -1,141 +1,316 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import "../styles/hero.css";
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.12,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 24,
+    },
+
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 0.7,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const assemblyVariants = {
+    hidden: {},
+
+    visible: {
+      transition: {
+        delayChildren: 0.25,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <section
-  className="premium-hero"
-  id="top"
-  onMouseMove={(e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
+    <section className="home-hero">
 
-    const x =
-      ((e.clientX - rect.left) / rect.width) * 100;
-
-    const y =
-      ((e.clientY - rect.top) / rect.height) * 100;
-
-    e.currentTarget.style.setProperty(
-      "--mouse-x",
-      `${x}%`
-    );
-
-    e.currentTarget.style.setProperty(
-      "--mouse-y",
-      `${y}%`
-    );
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.setProperty(
-      "--mouse-x",
-      "50%"
-    );
-
-    e.currentTarget.style.setProperty(
-      "--mouse-y",
-      "50%"
-    );
-  }}
->
-
-      {/* VIDEO BACKGROUND */}
-      <div className="premium-hero-image">
-        <img
-          src="/images/hero-data-center.png"
-          alt="Confitech technology infrastructure"
-        />
-      </div>
+      {/* BACKGROUND */}
+      <div className="home-hero-glow" />
+      <div className="home-hero-pattern" />
 
 
-      {/* DARK OVERLAY */}
-      <div className="premium-hero-overlay"></div>
+      <div className="container home-hero-container">
 
-      {/* SUBTLE GREEN GLOW */}
-      <div className="premium-hero-glow"></div>
-
-
-      <div className="container premium-hero-container">
+        {/* ================================================= */}
+        {/* LEFT CONTENT                                      */}
+        {/* ================================================= */}
 
         <motion.div
-          className="premium-hero-content"
-          initial={{ opacity: 0, y: 35 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          className="home-hero-content"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
 
-          <div className="premium-hero-eyebrow">
-            <span></span>
-
-            NETWORKING / DATA CENTRES / SECURITY
-          </div>
-
-
-          <h1 className="mobile-hero-title">
-            <span>Built to</span>
-            <span>Connect.</span>
-            <span>Engineered to</span>
-            <span>Perform.</span>
-          </h1>
+          <motion.span
+            className="home-hero-eyebrow"
+            variants={itemVariants}
+          >
+            TECHNOLOGY THAT MOVES BUSINESS FORWARD
+          </motion.span>
 
 
-          <div className="premium-hero-divider"></div>
+          <motion.h1 variants={itemVariants}>
+            Smarter infrastructure
+            <span className="hero-green-dot">.</span>
+
+            <span className="hero-title-second">
+              Stronger business
+              <span className="hero-green-dot">.</span>
+            </span>
+          </motion.h1>
 
 
-          <p>
-            Delivering dependable IT infrastructure, networking,
-            data centre, security and technology solutions designed
-            to support modern businesses.
-          </p>
+          <motion.p
+            className="home-hero-description"
+            variants={itemVariants}
+          >
+            Confitech delivers secure, scalable and reliable technology
+            solutions across networking, data centres, security,
+            consulting and cloud infrastructure—helping organisations
+            operate and grow with confidence.
+          </motion.p>
 
 
-          <div className="premium-hero-actions">
+          <motion.div
+            className="home-hero-actions"
+            variants={itemVariants}
+          >
 
-            <a href="/contact" className="premium-hero-button">
-              Get in Touch
-              <ArrowUpRight size={18} />
-            </a>
-
-            <a href="/services" className="premium-hero-text-link">
+            <Link
+              to="/services"
+              className="hero-primary-button"
+            >
               Explore Solutions
-              <ArrowUpRight size={17} />
-            </a>
 
-          </div>
+              <ArrowRight
+                size={18}
+                strokeWidth={2}
+              />
+            </Link>
+
+
+            <Link
+              to="/contact"
+              className="hero-secondary-button"
+            >
+              Talk to an Expert
+
+              <ArrowRight
+                size={18}
+                strokeWidth={2}
+              />
+            </Link>
+
+          </motion.div>
 
         </motion.div>
 
 
-        {/* SMALL BOTTOM INFORMATION */}
+        {/* ================================================= */}
+        {/* RIGHT VISUAL                                      */}
+        {/* ================================================= */}
 
         <motion.div
-          className="premium-hero-bottom"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          className="home-hero-visual"
+          variants={assemblyVariants}
+          initial="hidden"
+          animate="visible"
         >
 
-          <div className="premium-hero-service">
-            <span>01</span>
-            <div>
-              <small>EXPERTISE</small>
-              <strong>IT Infrastructure</strong>
-            </div>
-          </div>
+          {/* THIS WRAPPER IS IMPORTANT */}
+          <div className="hero-assembly">
 
-          <div className="premium-hero-service">
-            <span>02</span>
-            <div>
-              <small>SOLUTIONS</small>
-              <strong>Data Centres</strong>
-            </div>
-          </div>
 
-          <div className="premium-hero-service">
-            <span>03</span>
-            <div>
-              <small>SECURITY</small>
-              <strong>CCTV & Access Control</strong>
-            </div>
+            {/* NETWORK */}
+
+            <motion.img
+              src="/images/hero/network-lines.png"
+              alt=""
+              className="hero-layer hero-network-lines"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 0.78,
+                },
+
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+
+                  transition: {
+                    duration: 1.05,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                },
+              }}
+            />
+
+
+            {/* CLOUD */}
+
+            <motion.img
+              src="/images/hero/cloud.png"
+              alt=""
+              className="hero-layer hero-cloud"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -80,
+                  scale: 0.68,
+                },
+
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+
+                  transition: {
+                    duration: 0.9,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                },
+              }}
+            />
+
+
+            {/* SERVERS */}
+
+            <motion.img
+              src="/images/hero/servers.png"
+              alt=""
+              className="hero-layer hero-servers"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -100,
+                  y: 20,
+                  scale: 0.72,
+                },
+
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  y: 0,
+                  scale: 1,
+
+                  transition: {
+                    duration: 0.9,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                },
+              }}
+            />
+
+
+            {/* MONITOR */}
+
+            <motion.img
+              src="/images/hero/monitor.png"
+              alt=""
+              className="hero-layer hero-monitor"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: 100,
+                  y: 20,
+                  scale: 0.72,
+                },
+
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  y: 0,
+                  scale: 1,
+
+                  transition: {
+                    duration: 0.9,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                },
+              }}
+            />
+
+
+            {/* ANALYTICS */}
+
+            <motion.img
+              src="/images/hero/analytics.png"
+              alt=""
+              className="hero-layer hero-analytics"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -70,
+                  y: 70,
+                  scale: 0.68,
+                },
+
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  y: 0,
+                  scale: 1,
+
+                  transition: {
+                    duration: 0.85,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                },
+              }}
+            />
+
+
+            {/* SECURITY */}
+
+            <motion.img
+              src="/images/hero/security.png"
+              alt=""
+              className="hero-layer hero-security"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: 50,
+                  y: 80,
+                  scale: 0.68,
+                },
+
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  y: 0,
+                  scale: 1,
+
+                  transition: {
+                    duration: 0.85,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                },
+              }}
+            />
+
           </div>
 
         </motion.div>

@@ -1,0 +1,951 @@
+/* ===================================================== */
+/* WHY CONFITECH                                         */
+/* ===================================================== */
+
+.why-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    110px 0
+    115px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 96% 8%,
+      rgba(46, 204, 113, 0.065),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 2% 96%,
+      rgba(46, 204, 113, 0.045),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfdfc 55%,
+      #ffffff 100%
+    );
+}
+
+
+/* ===================================================== */
+/* BACKGROUND DECORATION                                 */
+/* ===================================================== */
+
+.why-bg-lines {
+  position: absolute;
+
+  width: 450px;
+  height: 330px;
+
+  top: -110px;
+  right: -110px;
+
+  opacity: 0.11;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  background:
+    repeating-radial-gradient(
+      ellipse at center,
+      transparent 0,
+      transparent 17px,
+      rgba(46, 204, 113, 0.15) 18px,
+      transparent 19px
+    );
+}
+
+
+.why-bg-dots {
+  position: absolute;
+
+  width: 180px;
+  height: 100px;
+
+  bottom: 15px;
+  left: -35px;
+
+  opacity: 0.24;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(46, 204, 113, 0.26) 2px,
+      transparent 2.5px
+    );
+
+  background-size:
+    19px
+    19px;
+}
+
+
+/* ===================================================== */
+/* CONTAINER                                             */
+/* ===================================================== */
+
+.why-container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ===================================================== */
+/* HEADER                                                */
+/* ===================================================== */
+
+.why-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(360px, 0.8fr);
+
+  align-items: end;
+
+  gap: 95px;
+
+  margin-bottom: 88px;
+}
+
+
+/* ===================================================== */
+/* LABEL                                                 */
+/* ===================================================== */
+
+.why-label {
+  display: inline-block;
+
+  color:
+    var(--primary-dark);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
+
+.why-heading-line {
+  width: 40px;
+  height: 3px;
+
+  margin-top: 20px;
+
+  border-radius: 100px;
+
+  background:
+    var(--primary);
+}
+
+
+/* ===================================================== */
+/* TITLE                                                 */
+/* ===================================================== */
+
+.why-heading h2 {
+  max-width: 690px;
+
+  margin-top: 33px;
+
+  color:
+    #20262b;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(49px, 4.6vw, 68px);
+
+  font-weight: 700;
+
+  line-height: 1.03;
+
+  letter-spacing: -3.8px;
+}
+
+
+.why-heading h2 > span {
+  display: block;
+}
+
+
+.why-heading h2 b {
+  color:
+    var(--primary-dark);
+
+  font-weight: inherit;
+}
+
+
+/* ===================================================== */
+/* HEADER RIGHT                                          */
+/* ===================================================== */
+
+.why-heading-right {
+  display: grid;
+
+  grid-template-columns:
+    1px
+    1fr;
+
+  gap: 38px;
+
+  align-items: center;
+
+  padding-bottom: 9px;
+}
+
+
+.why-heading-divider {
+  width: 1px;
+  height: 125px;
+
+  background:
+    rgba(46, 204, 113, 0.7);
+}
+
+
+.why-heading-right p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color:
+    #65716b;
+
+  font-size: 16px;
+
+  line-height: 1.95;
+}
+
+
+/* ===================================================== */
+/* TIMELINE                                              */
+/* ===================================================== */
+
+.why-timeline {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* HORIZONTAL LINE */
+
+.why-timeline-line {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  transform-origin: left center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(46, 204, 113, 0.65),
+      rgba(46, 204, 113, 0.28)
+    );
+}
+
+
+/* ===================================================== */
+/* TIMELINE GRID                                         */
+/* ===================================================== */
+
+.why-timeline-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+}
+
+
+/* ===================================================== */
+/* TIMELINE ITEM                                         */
+/* ===================================================== */
+
+.why-timeline-item {
+  position: relative;
+
+  min-width: 0;
+
+  padding:
+    40px
+    31px
+    0;
+
+  text-align: center;
+
+  border-right:
+    1px solid
+    rgba(32, 37, 42, 0.08);
+}
+
+
+.why-timeline-item:first-child {
+  padding-left: 0;
+}
+
+
+.why-timeline-item:last-child {
+  padding-right: 0;
+
+  border-right: 0;
+}
+
+
+/* ===================================================== */
+/* TIMELINE DOT                                          */
+/* ===================================================== */
+
+.why-timeline-dot {
+  position: absolute;
+
+  top: -9px;
+  left: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    #ffffff;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.why-timeline-dot span {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background:
+    var(--primary);
+
+  box-shadow:
+    0 0 0 5px
+    rgba(46, 204, 113, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.why-timeline-item:hover
+.why-timeline-dot span {
+  transform:
+    scale(1.2);
+
+  box-shadow:
+    0 0 0 7px
+    rgba(46, 204, 113, 0.09);
+}
+
+
+/* ===================================================== */
+/* NUMBER                                                */
+/* ===================================================== */
+
+.why-number {
+  color:
+    var(--primary-dark);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 29px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -1.2px;
+}
+
+
+.why-number-line {
+  width: 34px;
+  height: 2px;
+
+  margin:
+    16px auto
+    0;
+
+  border-radius: 100px;
+
+  background:
+    var(--primary);
+}
+
+
+/* ===================================================== */
+/* ICON                                                  */
+/* ===================================================== */
+
+.why-icon {
+  width: 92px;
+  height: 92px;
+
+  margin:
+    37px auto
+    0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    var(--primary-dark);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(46, 204, 113, 0.13),
+      rgba(46, 204, 113, 0.045)
+    );
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.why-timeline-item:hover
+.why-icon {
+  transform:
+    translateY(-4px);
+
+  background:
+    rgba(46, 204, 113, 0.13);
+}
+
+
+/* ===================================================== */
+/* CONTENT                                               */
+/* ===================================================== */
+
+.why-item-content {
+  margin-top: 30px;
+}
+
+
+.why-item-content h3 {
+  margin: 0;
+
+  color:
+    var(--heading);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.6px;
+}
+
+
+.why-title-line {
+  width: 30px;
+  height: 2px;
+
+  margin:
+    18px auto
+    0;
+
+  background:
+    rgba(46, 204, 113, 0.75);
+}
+
+
+.why-item-content p {
+  max-width: 250px;
+
+  margin:
+    24px auto
+    0;
+
+  color:
+    #66726c;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* ===================================================== */
+/* SMALL DESKTOP                                         */
+/* ===================================================== */
+
+@media (max-width: 1100px) {
+
+  .why-heading {
+    gap: 60px;
+  }
+
+
+  .why-heading h2 {
+    font-size:
+      clamp(46px, 5vw, 61px);
+  }
+
+
+  .why-timeline-item {
+    padding-inline: 22px;
+  }
+
+
+  .why-item-content h3 {
+    font-size: 16px;
+  }
+
+
+  .why-item-content p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* ===================================================== */
+/* TABLET                                                */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+
+  .why-section {
+    padding:
+      90px 0
+      85px;
+  }
+
+
+  .why-heading {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 65px;
+  }
+
+
+  .why-heading h2 {
+    max-width: 650px;
+
+    font-size:
+      clamp(44px, 7vw, 58px);
+  }
+
+
+  .why-heading-right {
+    max-width: 600px;
+
+    grid-template-columns:
+      1px
+      1fr;
+
+    gap: 25px;
+  }
+
+
+  .why-heading-divider {
+    height: 90px;
+  }
+
+
+  .why-heading-right p {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+
+  /* TWO COLUMN TIMELINE */
+
+  .why-timeline-line {
+    display: none;
+  }
+
+
+  .why-timeline-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap:
+      55px
+      0;
+  }
+
+
+  .why-timeline-item {
+    padding:
+      0
+      30px;
+
+    border-right:
+      1px solid
+      rgba(32, 37, 42, 0.08);
+  }
+
+
+  .why-timeline-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .why-timeline-item:first-child {
+    padding-left: 30px;
+  }
+
+
+  .why-timeline-item:last-child {
+    padding-right: 30px;
+  }
+
+
+  .why-timeline-dot {
+    display: none;
+  }
+
+
+  .why-number {
+    font-size: 26px;
+  }
+
+}
+
+
+/* ===================================================== */
+/* MOBILE - VERTICAL TIMELINE                            */
+/* ===================================================== */
+
+@media (max-width: 600px) {
+
+  .why-section {
+    padding:
+      70px 0
+      65px;
+
+    background:
+      radial-gradient(
+        circle at 100% 5%,
+        rgba(46, 204, 113, 0.055),
+        transparent 34%
+      ),
+      #ffffff;
+  }
+
+
+  .why-bg-lines {
+    width: 250px;
+    height: 220px;
+
+    opacity: 0.07;
+  }
+
+
+  .why-bg-dots {
+    display: none;
+  }
+
+
+  /* =================================================== */
+  /* HEADER                                              */
+  /* =================================================== */
+
+  .why-heading {
+    gap: 23px;
+
+    margin-bottom: 50px;
+  }
+
+
+  .why-label {
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+
+  .why-heading-line {
+    width: 37px;
+
+    margin-top: 14px;
+  }
+
+
+  .why-heading h2 {
+    max-width: 355px;
+
+    margin-top: 22px;
+
+    font-size:
+      clamp(38px, 10.8vw, 46px);
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .why-heading-right {
+    grid-template-columns:
+      2px
+      1fr;
+
+    gap: 17px;
+  }
+
+
+  .why-heading-divider {
+    height: 67px;
+  }
+
+
+  .why-heading-right p {
+    max-width: 330px;
+
+    font-size: 12px;
+
+    line-height: 1.72;
+  }
+
+
+  /* =================================================== */
+  /* MOBILE TIMELINE                                     */
+  /* =================================================== */
+
+  .why-timeline {
+    position: relative;
+  }
+
+
+  .why-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    bottom: 15px;
+
+    left: 12px;
+
+    width: 1px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(46, 204, 113, 0.8),
+        rgba(46, 204, 113, 0.15)
+      );
+  }
+
+
+  .why-timeline-grid {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+
+  .why-timeline-item,
+  .why-timeline-item:first-child,
+  .why-timeline-item:last-child {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+      0
+      0
+      43px
+      48px;
+
+    display: grid;
+
+    grid-template-columns:
+      54px
+      1fr;
+
+    column-gap: 14px;
+
+    text-align: left;
+
+    border: 0;
+  }
+
+
+  .why-timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+
+  /* DOT */
+
+  .why-timeline-dot {
+    position: absolute;
+
+    top: 5px;
+    left: 5px;
+
+    width: 15px;
+    height: 15px;
+
+    transform: none;
+
+    display: flex;
+
+    background:
+      #ffffff;
+  }
+
+
+  .why-timeline-dot span {
+    width: 12px;
+    height: 12px;
+
+    box-shadow:
+      0 0 0 4px
+      rgba(46, 204, 113, 0.08);
+  }
+
+
+  /* NUMBER */
+
+  .why-number {
+    grid-column:
+      1 / 2;
+
+    align-self: start;
+
+    font-size: 22px;
+  }
+
+
+  .why-number-line {
+    display: none;
+  }
+
+
+  /* ICON */
+
+  .why-icon {
+    grid-column:
+      1 / 2;
+
+    width: 54px;
+    height: 54px;
+
+    margin-top: 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  .why-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  /* CONTENT */
+
+  .why-item-content {
+    grid-column:
+      2 / 3;
+
+    grid-row:
+      1 / 3;
+
+    margin-top: 0;
+  }
+
+
+  .why-item-content h3 {
+    font-size: 15px;
+
+    line-height: 1.3;
+  }
+
+
+  .why-title-line {
+    width: 28px;
+
+    margin:
+      10px 0
+      0;
+  }
+
+
+  .why-item-content p {
+    max-width: 280px;
+
+    margin:
+      13px 0
+      0;
+
+    font-size: 11px;
+
+    line-height: 1.72;
+  }
+
+}
+
+
+/* ===================================================== */
+/* REDUCED MOTION                                        */
+/* ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .why-timeline-dot span,
+  .why-icon {
+    transition: none;
+  }
+
+}

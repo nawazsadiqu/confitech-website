@@ -1,0 +1,558 @@
+/* ===================================================== */
+/* CONFITECH NAVBAR                                      */
+/* ===================================================== */
+
+.site-header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 76px;
+
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-bottom: 1px solid rgba(32, 37, 42, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    height 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* SCROLLED */
+
+.site-header-scrolled {
+  height: 68px;
+
+  background: rgba(255, 255, 255, 0.985);
+
+  box-shadow:
+    0 8px 28px rgba(30, 40, 35, 0.055);
+}
+
+
+/* ===================================================== */
+/* INNER LAYOUT                                          */
+/* ===================================================== */
+
+.site-header-inner {
+  position: relative;
+
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(150px, 1fr)
+    auto
+    minmax(150px, 1fr);
+
+  align-items: center;
+
+  column-gap: 30px;
+}
+
+
+/* ===================================================== */
+/* LOGO                                                  */
+/* ===================================================== */
+
+.site-logo {
+  position: relative;
+
+  z-index: 1003;
+
+  justify-self: start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  width: 150px;
+}
+
+
+.site-logo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* ===================================================== */
+/* NAVIGATION                                            */
+/* ===================================================== */
+
+.site-navigation {
+  justify-self: center;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+
+.site-navigation a {
+  position: relative;
+
+  padding: 28px 0;
+
+  color: #343b38;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.22s ease;
+}
+
+
+/* ACTIVE UNDERLINE */
+
+.site-navigation a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 17px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  border-radius: 100px;
+
+  background: var(--primary);
+
+  transition:
+    width 0.25s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.site-navigation a:hover {
+  color: var(--heading);
+}
+
+
+.site-navigation a.active {
+  color: var(--heading);
+
+  font-weight: 600;
+}
+
+
+.site-navigation a:hover::after,
+.site-navigation a.active::after {
+  width: 27px;
+}
+
+
+/* ===================================================== */
+/* RIGHT SIDE                                            */
+/* ===================================================== */
+
+.site-header-actions {
+  position: relative;
+
+  z-index: 1003;
+
+  justify-self: end;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* CTA */
+
+.site-header-cta {
+  min-height: 44px;
+
+  padding: 0 19px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #35cc78,
+      #28bd68
+    );
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 7px 18px rgba(46, 204, 113, 0.16);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.site-header-cta svg {
+  transition:
+    transform 0.25s ease;
+}
+
+
+.site-header-cta:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #2ecc71,
+      #22b860
+    );
+
+  box-shadow:
+    0 11px 25px rgba(46, 204, 113, 0.23);
+}
+
+
+.site-header-cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+
+/* ===================================================== */
+/* MOBILE BUTTON                                         */
+/* ===================================================== */
+
+.site-menu-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  color: var(--heading);
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+/* ===================================================== */
+/* OVERLAY                                               */
+/* ===================================================== */
+
+.site-menu-overlay {
+  display: none;
+}
+
+
+/* ===================================================== */
+/* SMALL DESKTOP                                         */
+/* ===================================================== */
+
+@media (max-width: 1120px) {
+
+  .site-header-inner {
+    grid-template-columns:
+      minmax(135px, 1fr)
+      auto
+      minmax(135px, 1fr);
+
+    column-gap: 20px;
+  }
+
+
+  .site-logo {
+    width: 137px;
+  }
+
+
+  .site-navigation {
+    gap: 22px;
+  }
+
+
+  .site-navigation a {
+    font-size: 12px;
+  }
+
+
+  .site-header-cta {
+    padding: 0 16px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* ===================================================== */
+/* TABLET / MOBILE NAVIGATION                            */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+
+  .site-header {
+    height: 70px;
+  }
+
+
+  .site-header-scrolled {
+    height: 66px;
+  }
+
+
+  .site-header-inner {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    column-gap: 20px;
+  }
+
+
+  /* LOGO */
+
+  .site-logo {
+    width: 135px;
+  }
+
+
+  /* CTA */
+
+  .site-header-cta {
+    display: none;
+  }
+
+
+  /* MENU BUTTON */
+
+  .site-menu-button {
+    position: relative;
+
+    z-index: 1005;
+
+    display: flex;
+  }
+
+
+  /* SLIDE MENU */
+
+  .site-navigation {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: min(82vw, 350px);
+    height: 100svh;
+
+    padding:
+      105px
+      30px
+      40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
+    transform: translateX(105%);
+
+    background: #ffffff;
+
+    border-left:
+      1px solid rgba(32, 37, 42, 0.08);
+
+    box-shadow:
+      -25px 0 70px
+      rgba(25, 40, 32, 0.09);
+
+    transition:
+      transform 0.4s
+      cubic-bezier(0.22, 1, 0.36, 1);
+
+    z-index: 1002;
+  }
+
+
+  .site-navigation.is-open {
+    transform: translateX(0);
+  }
+
+
+  .site-navigation a {
+    width: 100%;
+
+    padding: 18px 0;
+
+    color: var(--heading);
+
+    border-bottom:
+      1px solid #edf0ee;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+
+  .site-navigation a::after {
+    display: none;
+  }
+
+
+  .site-navigation a.active {
+    color: var(--primary-dark);
+  }
+
+
+  /* OVERLAY */
+
+  .site-menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1001;
+
+    display: block;
+
+    border: 0;
+
+    background:
+      rgba(20, 27, 23, 0.32);
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    animation:
+      navbarOverlayIn 0.25s ease forwards;
+  }
+
+}
+
+
+/* ===================================================== */
+/* MOBILE                                                */
+/* ===================================================== */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    height: 66px;
+  }
+
+
+  .site-header-scrolled {
+    height: 62px;
+  }
+
+
+  .site-logo {
+    width: 124px;
+  }
+
+
+  .site-menu-button {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .site-navigation {
+    width: min(86vw, 325px);
+
+    padding:
+      92px
+      25px
+      32px;
+  }
+
+
+  .site-navigation a {
+    padding: 16px 0;
+
+    font-size: 15px;
+  }
+
+}
+
+
+/* ===================================================== */
+/* OVERLAY ANIMATION                                     */
+/* ===================================================== */
+
+@keyframes navbarOverlayIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* ===================================================== */
+/* REDUCED MOTION                                        */
+/* ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .site-header,
+  .site-navigation,
+  .site-navigation a::after,
+  .site-header-cta,
+  .site-header-cta svg {
+    transition: none;
+  }
+
+}
