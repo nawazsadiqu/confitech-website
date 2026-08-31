@@ -1,0 +1,1296 @@
+/* ===================================================== */
+/* PORTFOLIO PAGE                                        */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* CENTERED HEADER                                       */
+/* ===================================================== */
+
+.portfolio-page-header {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    165px 0
+    78px;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid rgba(32, 37, 42, 0.07);
+
+  background:
+    radial-gradient(
+      circle at 50% 75%,
+      rgba(46, 204, 113, 0.055),
+      transparent 38%
+    ),
+    #ffffff;
+}
+
+
+/* ===================================================== */
+/* HEADER CONTENT                                        */
+/* ===================================================== */
+
+.portfolio-header-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.portfolio-header-label {
+  display: inline-block;
+
+  color:
+    var(--primary-dark);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* HEADING */
+
+.portfolio-header-content h1 {
+  margin:
+    23px auto
+    0;
+
+  color:
+    var(--heading);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(53px, 5.3vw, 75px);
+
+  font-weight: 700;
+
+  line-height: 1.01;
+
+  letter-spacing: -4px;
+}
+
+
+.portfolio-header-content h1 span {
+  display: block;
+
+  color:
+    var(--primary-dark);
+}
+
+
+.portfolio-header-content h1 b {
+  color:
+    var(--primary);
+
+  font-weight: inherit;
+}
+
+
+/* LINE */
+
+.portfolio-header-line {
+  width: 40px;
+  height: 3px;
+
+  margin:
+    22px auto
+    0;
+
+  border-radius: 100px;
+
+  background:
+    var(--primary);
+}
+
+
+/* DESCRIPTION */
+
+.portfolio-header-content > p {
+  max-width: 630px;
+
+  margin:
+    22px auto
+    0;
+
+  color:
+    #606c66;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ===================================================== */
+/* TOP METRICS                                           */
+/* ===================================================== */
+
+.portfolio-header-metrics {
+  margin-top: 35px;
+
+  display: inline-grid;
+
+  grid-template-columns:
+    120px
+    1px
+    120px
+    1px
+    120px;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+.portfolio-header-metrics > div {
+  text-align: center;
+}
+
+
+.portfolio-header-metrics strong {
+  display: block;
+
+  color:
+    var(--primary-dark);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+.portfolio-header-metrics span {
+  display: block;
+
+  margin-top: 7px;
+
+  color:
+    #606b66;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+}
+
+
+.portfolio-header-metrics i {
+  width: 1px;
+  height: 44px;
+
+  background:
+    rgba(32, 37, 42, 0.13);
+}
+
+
+/* ===================================================== */
+/* SELECTED EXPERIENCE                                   */
+/* ===================================================== */
+
+.portfolio-selected-section {
+  padding:
+    60px 0
+    80px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbfdfc
+    );
+}
+
+
+/* ===================================================== */
+/* SECTION HEADING                                       */
+/* ===================================================== */
+
+.portfolio-selected-heading {
+  margin-bottom: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+.portfolio-selected-heading > span {
+  color:
+    #58645e;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+
+.portfolio-selected-heading p {
+  margin: 0;
+
+  color:
+    #7a8580;
+
+  font-size: 10px;
+}
+
+
+/* ===================================================== */
+/* ACCORDION                                             */
+/* ===================================================== */
+
+.portfolio-accordion {
+  width: 100%;
+}
+
+
+/* ===================================================== */
+/* EACH PROJECT                                          */
+/* ===================================================== */
+
+.portfolio-accordion-item {
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(32, 37, 42, 0.085);
+
+  border-bottom: 0;
+
+  background:
+    #ffffff;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.portfolio-accordion-item:first-child {
+  border-radius:
+    9px
+    9px
+    0
+    0;
+}
+
+
+.portfolio-accordion-item:last-child {
+  border-bottom:
+    1px solid
+    rgba(32, 37, 42, 0.085);
+
+  border-radius:
+    0
+    0
+    9px
+    9px;
+}
+
+
+.portfolio-accordion-item.is-active {
+  border-color:
+    rgba(46, 204, 113, 0.42);
+
+  box-shadow:
+    0 10px 28px
+    rgba(26, 67, 46, 0.035);
+}
+
+
+/* ===================================================== */
+/* CLICKABLE ROW                                         */
+/* ===================================================== */
+
+.portfolio-accordion-trigger {
+  width: 100%;
+  min-height: 68px;
+
+  padding:
+    0
+    19px
+    0
+    22px;
+
+  display: grid;
+
+  grid-template-columns:
+    54px
+    1px
+    minmax(220px, 1fr)
+    minmax(210px, 0.8fr)
+    40px;
+
+  align-items: center;
+
+  gap: 18px;
+
+  border: 0;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  background:
+    transparent;
+
+  transition:
+    background 0.25s ease;
+}
+
+
+.portfolio-accordion-trigger:hover {
+  background:
+    rgba(46, 204, 113, 0.018);
+}
+
+
+/* ===================================================== */
+/* NUMBER                                                */
+/* ===================================================== */
+
+.portfolio-accordion-number {
+  color:
+    var(--primary-dark);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+
+/* DIVIDER */
+
+.portfolio-row-divider {
+  width: 1px;
+  height: 28px;
+
+  background:
+    rgba(32, 37, 42, 0.12);
+}
+
+
+/* TITLE */
+
+.portfolio-accordion-title strong {
+  color:
+    var(--heading);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+/* CATEGORY */
+
+.portfolio-accordion-category {
+  color:
+    #6d7872;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* ===================================================== */
+/* ARROW                                                 */
+/* ===================================================== */
+
+.portfolio-accordion-arrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  justify-self: end;
+
+  color:
+    #53605a;
+
+  border-radius: 50%;
+
+  background:
+    #f6f8f7;
+
+  transition:
+    transform 0.35s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.portfolio-accordion-arrow.is-open {
+  color:
+    #ffffff;
+
+  background:
+    var(--primary-dark);
+
+  transform:
+    rotate(90deg);
+}
+
+
+/* ===================================================== */
+/* EXPANDED WRAPPER                                      */
+/* ===================================================== */
+
+.portfolio-project-expand-wrap {
+  overflow: hidden;
+}
+
+
+/* ===================================================== */
+/* EXPANDED PROJECT                                      */
+/* ===================================================== */
+
+.portfolio-project-expanded {
+  padding:
+    18px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(350px, 0.92fr)
+    minmax(0, 1.08fr);
+
+  gap: 38px;
+
+  border-top:
+    1px solid
+    rgba(32, 37, 42, 0.075);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fbfefc
+    );
+}
+
+
+/* ===================================================== */
+/* PROJECT IMAGE                                         */
+/* ===================================================== */
+
+.portfolio-expanded-image {
+  position: relative;
+
+  min-height: 355px;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background:
+    #f2f7f4;
+}
+
+
+.portfolio-expanded-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.65s ease;
+}
+
+
+.portfolio-accordion-item.is-active:hover
+.portfolio-expanded-image img {
+  transform:
+    scale(1.015);
+}
+
+
+.portfolio-expanded-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 16, 10, 0.02),
+      rgba(4, 16, 10, 0.09)
+    );
+}
+
+
+.portfolio-expanded-image > span {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  background:
+    rgba(4, 47, 31, 0.7);
+
+  backdrop-filter:
+    blur(8px);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* ===================================================== */
+/* EXPANDED CONTENT                                      */
+/* ===================================================== */
+
+.portfolio-expanded-content {
+  padding:
+    20px
+    20px
+    17px
+    0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* TITLE ROW */
+
+.portfolio-expanded-title-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+.portfolio-expanded-category {
+  color:
+    var(--primary-dark);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.portfolio-expanded-content h2 {
+  margin-top: 8px;
+
+  color:
+    var(--heading);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 37px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+.portfolio-expanded-content h3 {
+  margin-top: 8px;
+
+  color:
+    #58645e;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+/* ICON */
+
+.portfolio-expanded-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    var(--primary-dark);
+
+  border-radius: 9px;
+
+  background:
+    rgba(46, 204, 113, 0.075);
+}
+
+
+/* LINE */
+
+.portfolio-expanded-line {
+  width: 38px;
+  height: 2px;
+
+  margin-top: 17px;
+
+  background:
+    var(--primary);
+}
+
+
+/* DESCRIPTION */
+
+.portfolio-expanded-description {
+  max-width: 580px;
+
+  margin-top: 17px;
+
+  color:
+    #626e68;
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* ===================================================== */
+/* METRICS                                               */
+/* ===================================================== */
+
+.portfolio-expanded-metrics {
+  margin-top: 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  max-width: 460px;
+
+  border-top:
+    1px solid
+    rgba(32, 37, 42, 0.08);
+
+  border-bottom:
+    1px solid
+    rgba(32, 37, 42, 0.08);
+}
+
+
+.portfolio-expanded-metrics > div {
+  padding:
+    14px
+    13px;
+
+  border-right:
+    1px solid
+    rgba(32, 37, 42, 0.075);
+}
+
+
+.portfolio-expanded-metrics > div:first-child {
+  padding-left: 0;
+}
+
+
+.portfolio-expanded-metrics > div:last-child {
+  border-right: 0;
+}
+
+
+.portfolio-expanded-metrics strong {
+  display: block;
+
+  color:
+    var(--primary-dark);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 23px;
+
+  font-weight: 700;
+}
+
+
+.portfolio-expanded-metrics span {
+  display: block;
+
+  margin-top: 3px;
+
+  color:
+    #747f79;
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+}
+
+
+/* ===================================================== */
+/* SCOPE                                                 */
+/* ===================================================== */
+
+.portfolio-expanded-scope {
+  margin-top: 21px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    9px
+    18px;
+}
+
+
+.portfolio-expanded-scope > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    #59655f;
+
+  font-size: 9px;
+}
+
+
+.portfolio-expanded-scope svg {
+  flex-shrink: 0;
+
+  color:
+    var(--primary-dark);
+}
+
+
+/* ===================================================== */
+/* BUTTON                                                */
+/* ===================================================== */
+
+.portfolio-expanded-button {
+  width: fit-content;
+
+  min-height: 42px;
+
+  margin-top: 25px;
+
+  padding:
+    0
+    17px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color:
+    #ffffff;
+
+  border-radius: 5px;
+
+  background:
+    var(--primary-dark);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.portfolio-expanded-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    #087844;
+}
+
+
+/* ===================================================== */
+/* COMPACT CTA                                           */
+/* ===================================================== */
+
+.portfolio-compact-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      115deg,
+      #033b31,
+      #004c3c 55%,
+      #023b32
+    );
+}
+
+
+.portfolio-compact-cta-inner {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 150px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+
+.portfolio-compact-cta-inner > div > span {
+  color:
+    #37d87c;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+}
+
+
+.portfolio-compact-cta h2 {
+  margin-top: 9px;
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+
+.portfolio-compact-cta h2 b {
+  color:
+    #2dd278;
+
+  font-weight: inherit;
+}
+
+
+/* CTA BUTTON */
+
+.portfolio-compact-cta-button {
+  min-height: 42px;
+
+  padding:
+    0
+    17px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+
+  color:
+    #ffffff;
+
+  border-radius: 5px;
+
+  background:
+    #29ca70;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* WAVE */
+
+.portfolio-cta-wave {
+  position: absolute;
+
+  width: 480px;
+  height: 190px;
+
+  right: -40px;
+  bottom: -65px;
+
+  opacity: 0.16;
+
+  border-radius: 50%;
+
+  background:
+    repeating-radial-gradient(
+      ellipse at center,
+      transparent 0,
+      transparent 13px,
+      rgba(46, 204, 113, 0.34) 14px,
+      transparent 15px
+    );
+}
+
+
+/* ===================================================== */
+/* TABLET                                                */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+
+  .portfolio-page-header {
+    padding:
+      145px 0
+      65px;
+  }
+
+
+  .portfolio-accordion-trigger {
+    grid-template-columns:
+      45px
+      1px
+      1fr
+      180px
+      35px;
+  }
+
+
+  .portfolio-project-expanded {
+    grid-template-columns: 1fr;
+  }
+
+
+  .portfolio-expanded-image {
+    min-height: 380px;
+  }
+
+
+  .portfolio-expanded-content {
+    padding:
+      15px
+      15px
+      20px;
+  }
+
+}
+
+
+/* ===================================================== */
+/* MOBILE                                                */
+/* ===================================================== */
+
+@media (max-width: 600px) {
+
+  /* HEADER */
+
+  .portfolio-page-header {
+    padding:
+      120px 0
+      52px;
+  }
+
+
+  .portfolio-header-content h1 {
+    max-width: 355px;
+
+    font-size:
+      clamp(38px, 10.6vw, 46px);
+
+    letter-spacing: -2.4px;
+  }
+
+
+  .portfolio-header-content > p {
+    max-width: 335px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  .portfolio-header-metrics {
+    width: 100%;
+
+    margin-top: 28px;
+
+    grid-template-columns:
+      1fr
+      1px
+      1fr
+      1px
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .portfolio-header-metrics strong {
+    font-size: 22px;
+  }
+
+
+  .portfolio-header-metrics span {
+    font-size: 7px;
+  }
+
+
+  /* SELECTED */
+
+  .portfolio-selected-section {
+    padding:
+      43px 0
+      55px;
+  }
+
+
+  .portfolio-selected-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+
+  .portfolio-selected-heading p {
+    font-size: 9px;
+  }
+
+
+  /* ROW */
+
+  .portfolio-accordion-trigger {
+    min-height: 62px;
+
+    padding:
+      0
+      11px;
+
+    grid-template-columns:
+      30px
+      1px
+      1fr
+      29px;
+
+    gap: 9px;
+  }
+
+
+  .portfolio-accordion-number {
+    font-size: 15px;
+  }
+
+
+  .portfolio-accordion-title strong {
+    font-size: 12px;
+  }
+
+
+  .portfolio-accordion-category {
+    display: none;
+  }
+
+
+  .portfolio-accordion-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .portfolio-accordion-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+
+
+  /* EXPANDED */
+
+  .portfolio-project-expanded {
+    padding:
+      10px;
+
+    gap: 14px;
+  }
+
+
+  .portfolio-expanded-image {
+    min-height: 225px;
+
+    border-radius: 7px;
+  }
+
+
+  .portfolio-expanded-content {
+    padding:
+      10px
+      7px
+      13px;
+  }
+
+
+  .portfolio-expanded-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .portfolio-expanded-content h2 {
+    font-size: 27px;
+  }
+
+
+  .portfolio-expanded-content h3 {
+    font-size: 11px;
+  }
+
+
+  .portfolio-expanded-description {
+    font-size: 9.5px;
+
+    line-height: 1.65;
+  }
+
+
+  .portfolio-expanded-metrics strong {
+    font-size: 19px;
+  }
+
+
+  .portfolio-expanded-scope {
+    grid-template-columns: 1fr;
+  }
+
+
+  .portfolio-expanded-scope > div {
+    font-size: 8.5px;
+  }
+
+
+  .portfolio-expanded-button {
+    min-height: 38px;
+
+    font-size: 8.5px;
+  }
+
+
+  /* CTA */
+
+  .portfolio-compact-cta-inner {
+    min-height: 0;
+
+    padding:
+      28px 0;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  .portfolio-compact-cta h2 {
+    max-width: 300px;
+
+    font-size: 21px;
+
+    line-height: 1.18;
+  }
+
+}
