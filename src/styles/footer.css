@@ -8,31 +8,23 @@
   width: 100%;
 
   padding:
-    78px 0
-    0;
+    78px 0 0;
 
   overflow: hidden;
 
   border-top:
-    1px solid
-    rgba(32, 37, 42, 0.07);
+    1px solid rgba(32, 37, 42, 0.07);
 
   background:
-    radial-gradient(
-      circle at 95% 5%,
+    radial-gradient(circle at 95% 5%,
       rgba(46, 204, 113, 0.055),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 5% 100%,
+      transparent 30%),
+    radial-gradient(circle at 5% 100%,
       rgba(46, 204, 113, 0.035),
-      transparent 28%
-    ),
-    linear-gradient(
-      180deg,
+      transparent 28%),
+    linear-gradient(180deg,
       #ffffff 0%,
-      #fbfdfc 100%
-    );
+      #fbfdfc 100%);
 }
 
 
@@ -44,10 +36,7 @@
   display: grid;
 
   grid-template-columns:
-    minmax(280px, 1.35fr)
-    minmax(130px, 0.6fr)
-    minmax(190px, 0.85fr)
-    minmax(250px, 1fr);
+    minmax(280px, 1.35fr) minmax(130px, 0.6fr) minmax(190px, 0.85fr) minmax(250px, 1fr);
 
   align-items: start;
 
@@ -153,7 +142,7 @@
 /* NORMAL FOOTER LINKS                                   */
 /* ===================================================== */
 
-.footer-column > a {
+.footer-column>a {
   position: relative;
 
   display: inline-flex;
@@ -177,7 +166,7 @@
 }
 
 
-.footer-column > a:hover {
+.footer-column>a:hover {
   color:
     var(--primary-dark);
 
@@ -195,7 +184,7 @@
 }
 
 
-.footer-contact > a {
+.footer-contact>a {
   width: 100%;
 
   margin-bottom: 18px;
@@ -216,7 +205,7 @@
 }
 
 
-.footer-contact > a:hover {
+.footer-contact>a:hover {
   transform: none;
 
   color:
@@ -257,8 +246,7 @@
   gap: 30px;
 
   border-top:
-    1px solid
-    rgba(32, 37, 42, 0.08);
+    1px solid rgba(32, 37, 42, 0.08);
 }
 
 
@@ -278,7 +266,7 @@
 
 /* BACK TO TOP */
 
-.footer-bottom > a {
+.footer-bottom>a {
   display: inline-flex;
 
   align-items: center;
@@ -298,7 +286,7 @@
 }
 
 
-.footer-bottom > a svg {
+.footer-bottom>a svg {
   color:
     var(--primary);
 
@@ -307,7 +295,7 @@
 }
 
 
-.footer-bottom > a:hover {
+.footer-bottom>a:hover {
   gap: 10px;
 
   color:
@@ -315,7 +303,7 @@
 }
 
 
-.footer-bottom > a:hover svg {
+.footer-bottom>a:hover svg {
   transform:
     translate(2px, -2px);
 }
@@ -340,12 +328,10 @@
     translateX(-50%);
 
   background:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       transparent,
       rgba(46, 204, 113, 0.18),
-      transparent
-    );
+      transparent);
 }
 
 
@@ -357,10 +343,7 @@
 
   .footer-main {
     grid-template-columns:
-      minmax(260px, 1.2fr)
-      minmax(120px, 0.55fr)
-      minmax(180px, 0.8fr)
-      minmax(230px, 1fr);
+      minmax(260px, 1.2fr) minmax(120px, 0.55fr) minmax(180px, 0.8fr) minmax(230px, 1fr);
 
     gap: 38px;
   }
@@ -389,8 +372,7 @@
       repeat(2, 1fr);
 
     gap:
-      50px
-      45px;
+      50px 45px;
 
     padding-bottom: 55px;
   }
@@ -423,11 +405,9 @@
     padding-top: 52px;
 
     background:
-      radial-gradient(
-        circle at 100% 0%,
+      radial-gradient(circle at 100% 0%,
         rgba(46, 204, 113, 0.05),
-        transparent 35%
-      ),
+        transparent 35%),
       #ffffff;
   }
 
@@ -441,8 +421,7 @@
       repeat(2, 1fr);
 
     gap:
-      38px
-      24px;
+      38px 24px;
 
     padding-bottom: 42px;
   }
@@ -493,7 +472,7 @@
   }
 
 
-  .footer-column > a {
+  .footer-column>a {
     margin-bottom: 11px;
 
     font-size: 9.5px;
@@ -512,7 +491,7 @@
   }
 
 
-  .footer-contact > a {
+  .footer-contact>a {
     width: fit-content;
 
     margin-bottom: 13px;
@@ -554,7 +533,7 @@
   }
 
 
-  .footer-bottom > a {
+  .footer-bottom>a {
     font-size: 8.5px;
   }
 
@@ -569,17 +548,16 @@
 
   .footer-main {
     gap:
-      34px
-      17px;
+      34px 17px;
   }
 
 
-  .footer-column > a {
+  .footer-column>a {
     font-size: 9px;
   }
 
 
-  .footer-contact > a {
+  .footer-contact>a {
     font-size: 9px;
   }
 

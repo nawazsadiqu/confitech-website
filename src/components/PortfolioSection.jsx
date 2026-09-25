@@ -15,20 +15,22 @@ import "../styles/portfolio.css";
 const additionalProjects = [
   {
     number: "02",
-    title: "KOM-1 Server Room",
-    category: "SERVER ROOM PROJECT",
+    title: "MADAYN KOM1 Mini Data Centre",
+    category: "SERVER ROOM EXPANSION",
     icon: Server,
   },
+
   {
     number: "03",
-    title: "Borusan Logistics Office",
-    category: "SELECTED PROJECT",
+    title: "Borusan Logistics, Al Ghubra",
+    category: "OFFICE IT INFRASTRUCTURE",
     icon: Building2,
   },
+
   {
     number: "04",
-    title: "DHL (Huawei)",
-    category: "SELECTED PROJECT",
+    title: "DHL Warehouse, Barka",
+    category: "CABLING & WIRELESS",
     icon: Network,
   },
 ];
@@ -39,6 +41,7 @@ const PortfolioSection = () => {
     <section className="portfolio-section">
 
       <div className="portfolio-bg-lines" />
+
 
       <div className="container portfolio-container">
 
@@ -86,8 +89,8 @@ const PortfolioSection = () => {
           >
             <p>
               Selected project experience across structured cabling,
-              server rooms, data centre infrastructure and enterprise
-              technology environments.
+              fibre connectivity, data centre infrastructure, security,
+              access control and enterprise technology environments.
             </p>
 
             <Link
@@ -97,7 +100,10 @@ const PortfolioSection = () => {
               View Full Portfolio
 
               <span>
-                <ArrowUpRight size={16} />
+                <ArrowUpRight
+                  size={16}
+                  strokeWidth={2}
+                />
               </span>
             </Link>
           </motion.div>
@@ -106,7 +112,7 @@ const PortfolioSection = () => {
 
 
         {/* ================================================= */}
-        {/* FEATURED REAL PROJECT                             */}
+        {/* FEATURED PROJECT                                  */}
         {/* ================================================= */}
 
         <motion.div
@@ -126,7 +132,7 @@ const PortfolioSection = () => {
 
             <img
               src="/images/project-network.png"
-              alt="Structured network infrastructure"
+              alt="Structured cabling and fibre infrastructure"
             />
 
             <div className="portfolio-featured-number">
@@ -141,18 +147,20 @@ const PortfolioSection = () => {
           <div className="portfolio-featured-content">
 
             <span className="portfolio-project-type">
-              STRUCTURED CABLING PROJECT
+              STRUCTURED CABLING &amp; FIBRE OPTIC PROJECT
             </span>
 
             <h3>
               OMSC
-              <span>Oman Medical Simulation Centre</span>
+              <span>
+                Oman Medical Simulation Centre, Al Khoud
+              </span>
             </h3>
 
             <p className="portfolio-featured-description">
-              A Brand-Rex CAT6 structured cabling solution delivered
-              across a six-floor ministry building, connecting hundreds
-              of network outlets through multiple IDFs and fibre links.
+              Structured cabling and fibre optic cabling project consisting
+              of 850 Cat6 outlets with OM2 50/125 12 Core multimode fibre
+              connectivity between the Data Centre and three IDFs.
             </p>
 
 
@@ -161,8 +169,8 @@ const PortfolioSection = () => {
             <div className="portfolio-project-metrics">
 
               <div>
-                <strong>580</strong>
-                <span>CAT6 Points</span>
+                <strong>850</strong>
+                <span>Cat6 Outlets</span>
               </div>
 
               <div>
@@ -171,8 +179,8 @@ const PortfolioSection = () => {
               </div>
 
               <div>
-                <strong>6</strong>
-                <span>Floors</span>
+                <strong>12</strong>
+                <span>Core MM Fibre</span>
               </div>
 
             </div>
@@ -183,18 +191,27 @@ const PortfolioSection = () => {
             <div className="portfolio-project-scope">
 
               <span>
-                <Cable size={16} />
-                Brand-Rex CAT6
+                <Cable
+                  size={16}
+                  strokeWidth={1.8}
+                />
+                850 Cat6 Outlets
               </span>
 
               <span>
-                <Network size={16} />
-                50/125 Multimode Fibre
+                <Network
+                  size={16}
+                  strokeWidth={1.8}
+                />
+                OM2 50/125 Multimode Fibre
               </span>
 
               <span>
-                <Server size={16} />
-                Raised-Floor Data Centre Room
+                <Server
+                  size={16}
+                  strokeWidth={1.8}
+                />
+                Data Centre to Three IDFs
               </span>
 
             </div>
@@ -206,7 +223,10 @@ const PortfolioSection = () => {
             >
               Explore Project
 
-              <ArrowUpRight size={17} />
+              <ArrowUpRight
+                size={17}
+                strokeWidth={2}
+              />
             </Link>
 
           </div>
@@ -215,7 +235,7 @@ const PortfolioSection = () => {
 
 
         {/* ================================================= */}
-        {/* OTHER VERIFIED PROJECT NAMES                      */}
+        {/* ADDITIONAL SELECTED WORK                          */}
         {/* ================================================= */}
 
         <div className="portfolio-selected-heading">
@@ -225,6 +245,7 @@ const PortfolioSection = () => {
           </span>
 
           <div />
+
         </div>
 
 
@@ -287,7 +308,10 @@ const PortfolioSection = () => {
                   className="portfolio-row-arrow"
                   aria-label={`View ${project.title}`}
                 >
-                  <ArrowUpRight size={18} />
+                  <ArrowUpRight
+                    size={18}
+                    strokeWidth={2}
+                  />
                 </Link>
 
               </motion.div>
@@ -324,7 +348,13 @@ const PortfolioSection = () => {
             <i />
 
             <span>
-              Data Centres
+              Fibre Connectivity
+            </span>
+
+            <i />
+
+            <span>
+              Data Centre Infrastructure
             </span>
 
             <i />
@@ -336,13 +366,7 @@ const PortfolioSection = () => {
             <i />
 
             <span>
-              Environment Monitoring
-            </span>
-
-            <i />
-
-            <span>
-              Cloud Support
+              Time Attendance &amp; Automation
             </span>
 
           </div>

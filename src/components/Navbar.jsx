@@ -74,10 +74,6 @@ const Navbar = () => {
             Services
           </NavLink>
 
-          <NavLink to="/products" onClick={closeMenu}>
-            Products
-          </NavLink>
-
           <NavLink to="/portfolio" onClick={closeMenu}>
             Portfolio
           </NavLink>

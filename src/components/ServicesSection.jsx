@@ -2,8 +2,8 @@ import {
   Network,
   Server,
   ShieldCheck,
-  CloudCog,
-  BriefcaseBusiness,
+  Monitor,
+  Building2,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -18,45 +18,45 @@ const services = [
     number: "01",
     icon: Network,
     image: "/images/services/structured-cabling-light.png",
-    title: "Structured Cabling",
+    title: "Networking Infrastructure",
     description:
-      "Reliable structured cabling and network infrastructure designed for performance, scalability and long-term efficiency.",
+      "Integrated networking infrastructure for voice, video, data and specialised systems, including structured cabling, fibre optic connectivity and wireless networks.",
   },
 
   {
     number: "02",
     icon: Server,
     image: "/images/services/data-center-light.png",
-    title: "Data Center Solutions",
+    title: "Data Centre Infrastructure",
     description:
-      "Infrastructure and technology solutions for building dependable, secure and efficient data centre environments.",
+      "End-to-end data centre infrastructure covering cooling, power, cabling, monitoring, site preparation, safety and integrated security systems.",
   },
 
   {
     number: "03",
     icon: ShieldCheck,
     image: "/images/services/security-light.png",
-    title: "CCTV & Access Control",
+    title: "Safety & Security",
     description:
-      "Integrated surveillance and access control solutions that help businesses protect people, premises and critical assets.",
+      "Integrated physical security and life-safety solutions including CCTV, access control, gate barriers, video analytics and specialised surveillance systems.",
   },
 
   {
     number: "04",
-    icon: BriefcaseBusiness,
-    image: "/images/services/it-consulting-light.png",
-    title: "IT Consulting",
+    icon: Monitor,
+    image: "/images/services/audio-visual-cwe-light.png",
+    title: "Audio Visual & CWE",
     description:
-      "Professional consulting across networking, information security, operating systems and enterprise IT infrastructure.",
+      "Audio visual and collaborative working solutions including conferencing, projection, digital signage, sound systems and smart classroom technologies.",
   },
 
   {
     number: "05",
-    icon: CloudCog,
-    image: "/images/services/cloud-support-light.png",
-    title: "Cloud Support Services",
+    icon: Building2,
+    image: "/images/services/building-management-automation-light.png",
+    title: "Building Management & Automation",
     description:
-      "Reliable remote infrastructure management and cloud support services designed to keep your technology operating smoothly.",
+      "Integrated building management and facilities automation solutions designed for modern commercial and technology environments.",
   },
 ];
 
@@ -68,6 +68,7 @@ const ServicesSection = () => {
       id="services"
     >
       {/* BACKGROUND TECH DECORATION */}
+
       <div className="services-background-lines" />
 
 
@@ -106,6 +107,7 @@ const ServicesSection = () => {
 
             <h2>
               Technology solutions built around
+
               <span>
                 your infrastructure
                 <b>.</b>
@@ -140,9 +142,10 @@ const ServicesSection = () => {
           >
 
             <p>
-              From connectivity and data centres to security and cloud
-              support, Confitech provides practical technology solutions
-              designed around real business requirements.
+              From networking infrastructure and data centres to safety,
+              security, audio visual systems and facilities automation,
+              Confitech delivers integrated IT and communication solutions
+              engineered around real business requirements.
             </p>
 
           </motion.div>
@@ -204,10 +207,12 @@ const ServicesSection = () => {
                 <div className="service-card-meta">
 
                   <div className="service-icon">
+
                     <Icon
                       size={24}
                       strokeWidth={1.7}
                     />
+
                   </div>
 
 
@@ -242,6 +247,7 @@ const ServicesSection = () => {
                       size={16}
                       strokeWidth={2}
                     />
+
                   </Link>
 
                 </div>

@@ -66,8 +66,9 @@ const FinalCTA = () => {
 
 
             <p className="final-cta-description">
-              Talk to Confitech about your networking, data centre,
-              security, infrastructure and technology requirements.
+              Talk to Confitech about your networking infrastructure,
+              safety and security, data centre infrastructure, audio visual
+              systems and building management requirements.
             </p>
 
 
@@ -156,10 +157,10 @@ const FinalCTA = () => {
 
 
             <a
-              href="tel:+96824613022"
+              href="tel:+96899443792"
               className="final-cta-phone"
             >
-              +968 24613022
+              +968 9944 3792
             </a>
 
           </motion.div>

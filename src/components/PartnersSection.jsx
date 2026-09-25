@@ -1,4 +1,7 @@
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+} from "lucide-react";
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -8,38 +11,38 @@ import "../styles/partners.css";
 const partners = [
   {
     number: "01",
-    name: "NTI",
-    category: "Environment Monitoring",
+    name: "CommScope",
+    category: "BUSINESS ASSOCIATE",
     description:
-      "Environmental monitoring technologies for critical infrastructure and data centre environments.",
-    logo: "/images/partners/nti.png",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+    logo: "/images/partners/commscope.png",
   },
 
   {
     number: "02",
-    name: "Brand-Rex",
-    category: "Structured Cabling",
+    name: "Rittal",
+    category: "BUSINESS ASSOCIATE",
     description:
-      "Professional structured cabling and connectivity solutions for reliable network infrastructure.",
-    logo: "/images/partners/brand-rex.png",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+    logo: "/images/partners/rittal.png",
   },
 
   {
     number: "03",
-    name: "Matrix Comsec",
-    category: "Security & Telecom",
+    name: "Matrix",
+    category: "BUSINESS ASSOCIATE",
     description:
-      "Integrated security, access control and telecom solutions for modern organisations.",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
     logo: "/images/partners/matrix-comsec.png",
   },
 
   {
     number: "04",
-    name: "Offamata",
-    category: "ERP on Cloud",
+    name: "APC",
+    category: "BUSINESS ASSOCIATE",
     description:
-      "Cloud-based ERP technology designed to simplify and support business operations.",
-    logo: "/images/partners/offamata.png",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+    logo: "/images/partners/apc.png",
   },
 ];
 
@@ -49,6 +52,7 @@ const PartnersSection = () => {
     <section className="partners-section">
 
       {/* BACKGROUND DECORATION */}
+
       <div className="partners-bg-lines" />
       <div className="partners-bg-dots" />
 
@@ -84,7 +88,7 @@ const PartnersSection = () => {
           >
 
             <span className="partners-label">
-              TECHNOLOGY &amp; SOLUTION BRANDS
+              BUSINESS ASSOCIATES
             </span>
 
 
@@ -92,9 +96,12 @@ const PartnersSection = () => {
 
 
             <h2>
-              Solutions backed by
+              Working with
               <span>
-                <b>trusted technologies.</b>
+                <b>established technology</b>
+              </span>
+              <span>
+                brands &amp; associates.
               </span>
             </h2>
 
@@ -130,9 +137,9 @@ const PartnersSection = () => {
             <div>
 
               <p>
-                Confitech works with established technology
-                products and solution providers across
-                infrastructure, monitoring, networking and security.
+                A selected preview of Confitech&apos;s current Business
+                Associates. Explore the full partners page to view all
+                active technology brands listed in the current profile.
               </p>
 
 
@@ -140,7 +147,7 @@ const PartnersSection = () => {
                 to="/partners"
                 className="partners-view-link"
               >
-                Explore Technologies
+                View All Associates
 
                 <span>
                   <ArrowUpRight
@@ -158,7 +165,7 @@ const PartnersSection = () => {
 
 
         {/* ================================================= */}
-        {/* PARTNER LIST                                      */}
+        {/* PARTNER PREVIEW GRID                              */}
         {/* ================================================= */}
 
         <motion.div
@@ -182,7 +189,7 @@ const PartnersSection = () => {
 
           {partners.map((partner, index) => (
 
-            <motion.div
+            <motion.article
               className="partner-row"
               key={partner.name}
               initial={{
@@ -229,11 +236,6 @@ const PartnersSection = () => {
               </div>
 
 
-              {/* DIVIDER */}
-
-              <div className="partner-row-divider" />
-
-
               {/* CONTENT */}
 
               <div className="partner-content">
@@ -254,21 +256,7 @@ const PartnersSection = () => {
 
               </div>
 
-
-              {/* ACTION */}
-
-              <Link
-                to="/partners"
-                className="partner-arrow"
-                aria-label={`Explore ${partner.name}`}
-              >
-                <ArrowUpRight
-                  size={20}
-                  strokeWidth={1.8}
-                />
-              </Link>
-
-            </motion.div>
+            </motion.article>
 
           ))}
 

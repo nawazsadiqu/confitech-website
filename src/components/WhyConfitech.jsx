@@ -14,33 +14,33 @@ const reasons = [
   {
     number: "01",
     icon: Network,
-    title: "Technical Expertise",
+    title: "Integrated Solutions",
     description:
-      "Practical expertise across networking, infrastructure, security and enterprise technology environments.",
+      "Integrated IT and communication solutions covering networking, security, data centre infrastructure, audio visual systems and facilities automation.",
   },
 
   {
     number: "02",
     icon: Settings,
-    title: "End-to-End Solutions",
+    title: "Engineered & Supported Locally",
     description:
-      "From planning and implementation to support, Confitech helps manage the complete technology lifecycle.",
+      "Advanced and cost-effective technology solutions engineered and supported locally to meet practical business and infrastructure requirements.",
   },
 
   {
     number: "03",
     icon: Handshake,
-    title: "Trusted Partnerships",
+    title: "Client Focus & Accountability",
     description:
-      "Technology solutions supported by established products, brands and solution partners.",
+      "A customer-focused approach built around commitment, accountability, transparency and delivering requirements with quality, on time and within budget.",
   },
 
   {
     number: "04",
     icon: ShieldCheck,
-    title: "Reliable Support",
+    title: "Established Technology Associates",
     description:
-      "Solutions designed around reliability, business continuity and long-term operational requirements.",
+      "Confitech works with established technology brands and business associates across networking, data centre, security and automation solutions.",
   },
 ];
 
@@ -128,9 +128,10 @@ const WhyConfitech = () => {
             <div className="why-heading-divider" />
 
             <p>
-              We focus on practical, dependable technology
-              solutions that help businesses create secure,
-              connected and efficient infrastructure.
+              Confitech combines technology expertise, integrated
+              solutions and local support to deliver advanced,
+              cost-effective infrastructure for diverse business
+              and industry requirements.
             </p>
 
           </motion.div>

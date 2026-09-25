@@ -105,9 +105,9 @@ const Contact = () => {
 
 
               <p>
-                Get in touch with Confitech for networking,
-                infrastructure, data centre, security and
-                enterprise technology requirements.
+                Get in touch with Confitech for networking infrastructure,
+                safety and security, data centre infrastructure, audio visual
+                systems and building management requirements.
               </p>
 
             </motion.div>
@@ -263,7 +263,7 @@ const Contact = () => {
 
 
                     <strong>
-                      +968 24613022
+                      +968 9944 3792
                     </strong>
 
                   </div>
@@ -493,34 +493,45 @@ const Contact = () => {
                     id="contact-service"
                     defaultValue=""
                   >
-
-                    <option
-                      value=""
-                      disabled
-                    >
+                    <option value="" disabled>
                       Select a service
                     </option>
 
-                    <option value="structured-cabling">
-                      Structured Cabling
+                    <option value="networking-infrastructure">
+                      Networking Infrastructure &amp; Structured Cabling
                     </option>
 
-                    <option value="data-center">
-                      Data Center Solutions
+                    <option value="data-centre">
+                      Data Centre Solutions
                     </option>
 
-                    <option value="security">
-                      CCTV &amp; Access Control
+                    <option value="raised-access-flooring">
+                      Raised Access Flooring
                     </option>
 
-                    <option value="consulting">
-                      Onshore IT Consulting
+                    <option value="safety-security">
+                      Safety &amp; Security Solutions
                     </option>
 
-                    <option value="cloud-support">
-                      Cloud Support Services
+                    <option value="time-attendance-access-control">
+                      Time-Attendance &amp; Access Control
                     </option>
 
+                    <option value="aidc-rfid">
+                      AIDC, Barcode &amp; RFID Solutions
+                    </option>
+
+                    <option value="audio-visual-cwe">
+                      Audio Visual &amp; Collaborative Working Environment
+                    </option>
+
+                    <option value="gate-automation">
+                      Automatic Gate Motors &amp; Road Barriers
+                    </option>
+
+                    <option value="building-management">
+                      Building Management &amp; Facilities Automation
+                    </option>
                   </select>
 
                 </div>
@@ -637,8 +648,8 @@ const Contact = () => {
                 </span>
 
 
-                <a href="tel:+96824613022">
-                  +968 24613022
+                <a href="tel:+96899443792">
+                  +968 9944 3792
                 </a>
 
               </div>

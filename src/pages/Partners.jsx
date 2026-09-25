@@ -1,10 +1,9 @@
 import {
-  ArrowRight,
   ArrowUpRight,
-  Cloud,
-  Cable,
+  Network,
+  Server,
   ShieldCheck,
-  MonitorCog,
+  DoorOpen,
   MessageCircle,
 } from "lucide-react";
 
@@ -20,61 +19,124 @@ import "../styles/partnersPage.css";
 const partners = [
   {
     number: "01",
-    name: "NTI",
-    area: "ENVIRONMENT MONITORING",
-    logo: "/images/partners/nti.png",
+    name: "CommScope",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/commscope.png",
     description:
-      "Environment monitoring and data acquisition solutions designed for critical infrastructure, facilities and technology environments.",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
   },
 
   {
     number: "02",
-    name: "Brand-Rex",
-    area: "STRUCTURED CABLING",
-    logo: "/images/partners/brand-rex.png",
+    name: "Rittal",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/rittal.png",
     description:
-      "High-performance structured cabling and connectivity solutions designed for reliable voice, data and network infrastructure.",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
   },
 
   {
     number: "03",
-    name: "Matrix Comsec",
-    area: "SECURITY & TELECOM",
+    name: "Matrix",
+    area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/matrix-comsec.png",
     description:
-      "Integrated security, telecom and access-control solutions for modern enterprise and business environments.",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
   },
 
   {
     number: "04",
-    name: "Offamata",
-    area: "ERP ON CLOUD",
-    logo: "/images/partners/offamata.png",
+    name: "A&T",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/a-t.png",
     description:
-      "Cloud-based ERP technology designed to help organisations streamline operations and improve business efficiency.",
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+  },
+
+  {
+    number: "05",
+    name: "BFT",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/bft.png",
+    description:
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+  },
+
+  {
+    number: "06",
+    name: "Optima",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/optima.png",
+    description:
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+  },
+
+  {
+    number: "07",
+    name: "UNV",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/unv.png",
+    description:
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+  },
+
+  {
+    number: "08",
+    name: "TP-Link",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/tp-link.png",
+    description:
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+  },
+
+  {
+    number: "09",
+    name: "Ultima",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/ultima.png",
+    description:
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+  },
+
+  {
+    number: "10",
+    name: "PLANET",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/planet.png",
+    description:
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+  },
+
+  {
+    number: "11",
+    name: "APC",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/apc.png",
+    description:
+      "Technology brand listed among Confitech's Business Associates in the current company profile.",
   },
 ];
 
 
 const capabilities = [
   {
-    icon: MonitorCog,
-    title: "Environment Monitoring",
+    icon: Network,
+    title: "Networking Infrastructure",
   },
 
   {
-    icon: Cable,
-    title: "Structured Cabling",
+    icon: Server,
+    title: "Data Centre Infrastructure",
   },
 
   {
     icon: ShieldCheck,
-    title: "Security & Telecom",
+    title: "Safety & Security",
   },
 
   {
-    icon: Cloud,
-    title: "ERP on Cloud",
+    icon: DoorOpen,
+    title: "Access & Automation",
   },
 ];
 
@@ -116,7 +178,7 @@ const Partners = () => {
             >
 
               <span className="partners-page-label">
-                TECHNOLOGY PARTNERS
+                BUSINESS ASSOCIATES
               </span>
 
 
@@ -126,11 +188,11 @@ const Partners = () => {
               <h1>
                 Working with
                 <span>
-                  technology that
+                  established technology
                 </span>
 
                 <span className="partners-page-green">
-                  businesses can rely on
+                  brands &amp; associates
                   <b>.</b>
                 </span>
               </h1>
@@ -161,9 +223,9 @@ const Partners = () => {
             >
 
               <p>
-                Confitech works with established technology brands
-                and solution providers across infrastructure,
-                monitoring, networking, security and enterprise systems.
+                Confitech&apos;s company profile lists established
+                Business Associates supporting its technology,
+                infrastructure, security and automation ecosystem.
               </p>
 
 
@@ -173,18 +235,18 @@ const Partners = () => {
               <div className="partners-page-partner-count">
 
                 <strong>
-                  04
+                  11
                 </strong>
 
 
                 <div>
 
                   <span>
-                    TECHNOLOGY PARTNERS
+                    BUSINESS ASSOCIATES
                   </span>
 
                   <p>
-                    One integrated technology ecosystem.
+                    Listed in the current company profile.
                   </p>
 
                 </div>
@@ -272,105 +334,95 @@ const Partners = () => {
 
             <div className="partners-page-list">
 
-              {partners.map((partner, index) => (
+              {partners.map((partner, index) => {
 
-                <motion.article
-                  className="partners-page-row"
-                  key={partner.name}
-                  initial={{
-                    opacity: 0,
-                    y: 22,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.18,
-                  }}
-                  transition={{
-                    duration: 0.55,
-                    delay: index * 0.06,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                >
-
-                  {/* NUMBER */}
-
-                  <div className="partners-page-number-wrap">
-
-                    <span className="partners-page-number">
-                      {partner.number}
-                    </span>
+                const isLastOdd =
+                  partners.length % 2 !== 0 &&
+                  index === partners.length - 1;
 
 
-                    <div className="partners-page-number-line" />
+                return (
 
-                  </div>
-
-
-                  {/* DIVIDER */}
-
-                  <div className="partners-page-row-divider" />
-
-
-                  {/* LOGO */}
-
-                  <div className="partners-page-logo">
-
-                    <img
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      loading="lazy"
-                    />
-
-                  </div>
-
-
-                  {/* CONTENT */}
-
-                  <div className="partners-page-content">
-
-                    <span className="partners-page-category">
-                      {partner.area}
-                    </span>
-
-
-                    <h2>
-                      {partner.name}
-                    </h2>
-
-
-                    <p>
-                      {partner.description}
-                    </p>
-
-                  </div>
-
-
-                  {/* ARROW */}
-
-                  <Link
-                    to="/products"
-                    className="partners-page-arrow"
-                    aria-label={`Explore ${partner.name}`}
+                  <motion.article
+                    className={`partners-page-card ${isLastOdd
+                        ? "is-last-odd"
+                        : ""
+                      }`}
+                    key={partner.name}
+                    initial={{
+                      opacity: 0,
+                      y: 22,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    viewport={{
+                      once: true,
+                      amount: 0.18,
+                    }}
+                    transition={{
+                      duration: 0.55,
+                      delay: index * 0.05,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
                   >
 
-                    <ArrowRight
-                      size={20}
-                      strokeWidth={1.8}
-                    />
+                    {/* NUMBER */}
 
-                  </Link>
+                    <div className="partners-page-number-wrap">
 
-                </motion.article>
+                      <span className="partners-page-number">
+                        {partner.number}
+                      </span>
 
-              ))}
+
+                      <div className="partners-page-number-line" />
+
+                    </div>
+
+
+                    {/* LOGO */}
+
+                    <div className="partners-page-logo">
+
+                      <img
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        loading="lazy"
+                      />
+
+                    </div>
+
+
+                    {/* CONTENT */}
+
+                    <div className="partners-page-content">
+
+                      <span className="partners-page-category">
+                        {partner.area}
+                      </span>
+
+
+                      <h2>
+                        {partner.name}
+                      </h2>
+
+
+                      <p>
+                        {partner.description}
+                      </p>
+
+                    </div>
+
+                  </motion.article>
+
+                );
+              })}
 
             </div>
 
-                    </div>
+          </div>
 
         </section>
 
@@ -407,7 +459,7 @@ const Partners = () => {
             >
 
               <span className="partners-page-label">
-                PARTNERSHIPS &amp; CREDENTIALS
+                BUSINESS ASSOCIATES &amp; CREDENTIALS
               </span>
 
 
@@ -424,8 +476,8 @@ const Partners = () => {
 
 
               <p>
-                Partnership credentials supporting Confitech&apos;s
-                technology and infrastructure capabilities.
+                Business associate relationships and partnership
+                credentials supporting Confitech&apos;s technology capabilities.
               </p>
 
             </motion.div>
@@ -454,8 +506,6 @@ const Partners = () => {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-
-              {/* LEFT - ACTUAL CERTIFICATE */}
 
               <a
                 href="/images/certifications/ruijie-business-partner.jpeg"
@@ -517,6 +567,19 @@ const Partners = () => {
 
                     <strong>
                       Oman
+                    </strong>
+
+                  </div>
+
+
+                  <div>
+
+                    <span>
+                      Validity
+                    </span>
+
+                    <strong>
+                      01 Jul - 31 Dec 2026
                     </strong>
 
                   </div>

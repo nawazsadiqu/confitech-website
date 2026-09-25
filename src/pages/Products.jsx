@@ -35,7 +35,7 @@ const products = [
     title: "Environment Monitoring",
 
     description:
-      "Advanced environment monitoring solutions that help organisations track, manage and protect critical infrastructure and business environments.",
+      "Environment monitoring solutions supporting critical infrastructure, data centre environments and integrated infrastructure management.",
 
     image:
       "/images/products/nti-environment-monitoring.png",
@@ -44,11 +44,11 @@ const products = [
       "NTI environment monitoring equipment",
 
     features: [
-      "Temperature & Humidity Monitoring",
-      "Power & Energy Monitoring",
-      "Leak Detection & Water Monitoring",
-      "Environmental Sensors & Alerting",
-      "Remote Monitoring & Notifications",
+      "Environment Monitoring Systems",
+      "Data Centre Infrastructure Monitoring",
+      "Critical Environment Monitoring",
+      "Centralised Monitoring & Alerting",
+      "Infrastructure Management Support",
     ],
   },
 
@@ -60,23 +60,23 @@ const products = [
 
     logo: "/images/products/logos/matrix-comsec.png",
 
-    title: "Security & Telecom Solutions",
+    title: "Time-Attendance & Access Control Solutions",
 
     description:
-      "Integrated security, communication and enterprise solutions designed to help businesses stay connected, secure and operationally efficient.",
+      "Centralised time-attendance and enterprise access-control solutions designed for real-time monitoring, workforce management and secure multi-location access.",
 
     image:
       "/images/products/matrix-security-telecom.png",
 
     imageAlt:
-      "Matrix Comsec security and telecom products",
+      "Matrix Comsec time-attendance and access control products",
 
     features: [
-      "IP-PBX & Unified Communication",
-      "VoIP Gateways & Communication Solutions",
-      "Access Control & Time-Attendance",
-      "Video Surveillance & CCTV Solutions",
-      "Intrusion Detection & Enterprise Security",
+      "Centralised Multi-Location Time-Attendance",
+      "Real-Time Monitoring & Live Attendance Tracking",
+      "Multi-Shift & Overnight Shift Management",
+      "Biometric, User, Zone & Time-Based Access Control",
+      "Centralised Device Monitoring & Fire Alarm Integration",
     ],
   },
 
@@ -91,7 +91,7 @@ const products = [
     title: "Structured Cabling Solutions",
 
     description:
-      "High-performance structured cabling and connectivity solutions designed for dependable, scalable and future-ready network infrastructure.",
+      "Structured cabling and connectivity solutions supporting dependable voice, data and network infrastructure across modern business environments.",
 
     image:
       "/images/products/brand-rex-cabling.png",
@@ -100,11 +100,11 @@ const products = [
       "Brand-Rex structured cabling products",
 
     features: [
-      "Copper Cabling Systems (Cat5e, Cat6, Cat6A)",
-      "Fibre Optic Cabling Solutions",
-      "Cabinets, Racks & Accessories",
-      "Network Infrastructure Solutions",
-      "Testing, Certification & Support",
+      "Cat 5e, Cat 6 & Cat 6A Cabling Systems",
+      "Data Network & Ethernet Cabling",
+      "Fibre Optic Cabling",
+      "Patch Panel Termination",
+      "Network Infrastructure Connectivity",
     ],
   },
 ];
@@ -122,7 +122,7 @@ const productAreas = [
 
   {
     icon: ShieldCheck,
-    title: "Security & Telecom",
+    title: "Time-Attendance & Access Control",
   },
 
   {
@@ -140,37 +140,37 @@ const benefits = [
   {
     icon: Award,
 
-    title: "Quality Assured",
+    title: "Integrated Solutions",
 
     text:
-      "Technology solutions supported by established global brands.",
+      "Integrated IT and communication solutions designed around diverse business requirements.",
   },
 
   {
     icon: BarChart3,
 
-    title: "Performance Driven",
+    title: "Advanced & Cost-Effective",
 
     text:
-      "Solutions designed around reliability, scalability and long-term value.",
+      "Technology solutions focused on advanced capability and cost-effective implementation.",
   },
 
   {
     icon: Headphones,
 
-    title: "Expert Support",
+    title: "Locally Supported",
 
     text:
-      "Technical expertise and practical support throughout the technology lifecycle.",
+      "Solutions engineered and supported locally for dependable service and continuity.",
   },
 
   {
     icon: Layers3,
 
-    title: "Scalable Solutions",
+    title: "Committed Delivery",
 
     text:
-      "Technology designed to evolve alongside your business requirements.",
+      "A focus on quality, accountability and delivering requirements with diligence.",
   },
 ];
 
@@ -237,10 +237,10 @@ const Products = () => {
               {/* DESCRIPTION */}
 
               <p className="products-editorial-description">
-                Explore proven technologies across environmental
-                monitoring, security, telecom and network infrastructure,
-                selected to support reliable and scalable business
-                environments.
+                Explore technology solutions across environment monitoring,
+                time-attendance, access control and structured network
+                infrastructure, supporting reliable and integrated
+                business environments.
               </p>
 
 
@@ -393,7 +393,7 @@ const Products = () => {
             >
 
               <span>
-                OUR PRODUCT PARTNERS
+                FEATURED TECHNOLOGIES
               </span>
 
 
@@ -407,9 +407,9 @@ const Products = () => {
 
 
               <p>
-                Confitech works with established technology brands
-                to deliver dependable, scalable and future-ready
-                solutions for modern business environments.
+                Confitech delivers technology solutions across environment
+                monitoring, access control and structured network infrastructure
+                for modern business environments.
               </p>
 
             </motion.div>

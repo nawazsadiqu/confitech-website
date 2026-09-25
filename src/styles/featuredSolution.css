@@ -8,28 +8,21 @@
   width: 100%;
 
   padding:
-    115px 0
-    105px;
+    115px 0 105px;
 
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 95% 10%,
+    radial-gradient(circle at 95% 10%,
       rgba(46, 204, 113, 0.07),
-      transparent 31%
-    ),
-    radial-gradient(
-      circle at 5% 95%,
+      transparent 31%),
+    radial-gradient(circle at 5% 95%,
       rgba(46, 204, 113, 0.05),
-      transparent 32%
-    ),
-    linear-gradient(
-      180deg,
+      transparent 32%),
+    linear-gradient(180deg,
       #ffffff 0%,
       #fbfdfc 52%,
-      #ffffff 100%
-    );
+      #ffffff 100%);
 }
 
 
@@ -53,13 +46,11 @@
   border-radius: 50%;
 
   background:
-    repeating-radial-gradient(
-      ellipse at center,
+    repeating-radial-gradient(ellipse at center,
       transparent 0,
       transparent 16px,
       rgba(46, 204, 113, 0.15) 17px,
-      transparent 18px
-    );
+      transparent 18px);
 }
 
 
@@ -77,15 +68,12 @@
   pointer-events: none;
 
   background-image:
-    radial-gradient(
-      circle,
+    radial-gradient(circle,
       rgba(46, 204, 113, 0.27) 2px,
-      transparent 2.5px
-    );
+      transparent 2.5px);
 
   background-size:
-    18px
-    18px;
+    18px 18px;
 }
 
 
@@ -108,8 +96,7 @@
   display: grid;
 
   grid-template-columns:
-    minmax(350px, 0.82fr)
-    minmax(0, 1.42fr);
+    minmax(350px, 0.82fr) minmax(0, 1.42fr);
 
   align-items: center;
 
@@ -165,8 +152,7 @@
   max-width: 575px;
 
   margin:
-    27px 0
-    0;
+    27px 0 0;
 
   color:
     #20262b;
@@ -186,7 +172,7 @@
 }
 
 
-.featured-intro h2 > span {
+.featured-intro h2>span {
   display: block;
 }
 
@@ -203,7 +189,7 @@
 /* DESCRIPTION                                           */
 /* ===================================================== */
 
-.featured-intro > p {
+.featured-intro>p {
   max-width: 500px;
 
   margin-top: 27px;
@@ -230,10 +216,7 @@
   display: grid;
 
   grid-template-columns:
-    1.15fr
-    1fr
-    1fr
-    0.86fr;
+    1.15fr 1fr 1fr 0.86fr;
 
   gap: 0;
 
@@ -288,12 +271,10 @@
   z-index: 4;
 
   clip-path:
-    polygon(
-      8% 0,
+    polygon(8% 0,
       100% 0,
       91% 100%,
-      0 100%
-    );
+      0 100%);
 
   margin-right: -14px;
 }
@@ -303,12 +284,10 @@
   z-index: 3;
 
   clip-path:
-    polygon(
-      9% 0,
+    polygon(9% 0,
       100% 0,
       91% 100%,
-      0 100%
-    );
+      0 100%);
 
   margin-left: -7px;
   margin-right: -14px;
@@ -319,12 +298,10 @@
   z-index: 2;
 
   clip-path:
-    polygon(
-      9% 0,
+    polygon(9% 0,
       100% 0,
       91% 100%,
-      0 100%
-    );
+      0 100%);
 
   margin-left: -7px;
   margin-right: -14px;
@@ -335,12 +312,10 @@
   z-index: 1;
 
   clip-path:
-    polygon(
-      9% 0,
+    polygon(9% 0,
       100% 0,
       92% 100%,
-      0 100%
-    );
+      0 100%);
 
   margin-left: -7px;
 }
@@ -390,19 +365,15 @@
   min-height: 230px;
 
   padding:
-    25px
-    27px
-    28px;
+    25px 27px 28px;
 
   overflow: hidden;
 
   border:
-    1px solid
-    rgba(32, 37, 42, 0.07);
+    1px solid rgba(32, 37, 42, 0.07);
 
   border-bottom:
-    3px solid
-    rgba(46, 204, 113, 0.72);
+    3px solid rgba(46, 204, 113, 0.72);
 
   border-radius: 11px;
 
@@ -410,8 +381,7 @@
     rgba(255, 255, 255, 0.95);
 
   box-shadow:
-    0 12px 36px
-    rgba(30, 46, 38, 0.045);
+    0 12px 36px rgba(30, 46, 38, 0.045);
 
   transition:
     transform 0.3s ease,
@@ -428,8 +398,7 @@
     rgba(46, 204, 113, 0.2);
 
   box-shadow:
-    0 20px 48px
-    rgba(30, 46, 38, 0.08);
+    0 20px 48px rgba(30, 46, 38, 0.08);
 }
 
 
@@ -509,8 +478,7 @@
   display: grid;
 
   grid-template-columns:
-    74px
-    1fr;
+    74px 1fr;
 
   gap: 20px;
 
@@ -535,11 +503,9 @@
   border-radius: 12px;
 
   background:
-    linear-gradient(
-      145deg,
+    linear-gradient(145deg,
       rgba(46, 204, 113, 0.12),
-      rgba(46, 204, 113, 0.045)
-    );
+      rgba(46, 204, 113, 0.045));
 }
 
 
@@ -585,25 +551,19 @@
   margin-top: 36px;
 
   padding:
-    18px
-    28px;
+    18px 28px;
 
   display: grid;
 
   grid-template-columns:
-    minmax(260px, 1fr)
-    1px
-    auto
-    1px
-    minmax(200px, 0.68fr);
+    minmax(260px, 1fr) 1px auto 1px minmax(200px, 0.68fr);
 
   align-items: center;
 
   gap: 28px;
 
   border:
-    1px solid
-    rgba(32, 37, 42, 0.07);
+    1px solid rgba(32, 37, 42, 0.07);
 
   border-radius: 12px;
 
@@ -611,8 +571,7 @@
     rgba(255, 255, 255, 0.95);
 
   box-shadow:
-    0 12px 38px
-    rgba(30, 46, 38, 0.045);
+    0 12px 38px rgba(30, 46, 38, 0.045);
 }
 
 
@@ -697,8 +656,7 @@
   min-height: 55px;
 
   padding:
-    0 16px
-    0 23px;
+    0 16px 0 23px;
 
   display: inline-flex;
 
@@ -713,15 +671,12 @@
     #ffffff;
 
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       #19ae5d,
-      #13984f
-    );
+      #13984f);
 
   box-shadow:
-    0 10px 25px
-    rgba(29, 165, 89, 0.2);
+    0 10px 25px rgba(29, 165, 89, 0.2);
 
   font-size: 13px;
 
@@ -735,7 +690,7 @@
 }
 
 
-.featured-cta-button > span {
+.featured-cta-button>span {
   width: 35px;
   height: 35px;
 
@@ -759,8 +714,7 @@
     translateY(-2px);
 
   box-shadow:
-    0 14px 30px
-    rgba(29, 165, 89, 0.27);
+    0 14px 30px rgba(29, 165, 89, 0.27);
 }
 
 
@@ -821,8 +775,7 @@
 
   .featured-solution {
     padding:
-      90px 0
-      85px;
+      90px 0 85px;
   }
 
 
@@ -912,15 +865,12 @@
 
   .featured-solution {
     padding:
-      70px 0
-      65px;
+      70px 0 65px;
 
     background:
-      radial-gradient(
-        circle at 100% 4%,
+      radial-gradient(circle at 100% 4%,
         rgba(46, 204, 113, 0.055),
-        transparent 35%
-      ),
+        transparent 35%),
       #ffffff;
   }
 
@@ -956,7 +906,7 @@
   }
 
 
-  .featured-intro > p {
+  .featured-intro>p {
     max-width: 350px;
 
     margin-top: 20px;
@@ -1086,8 +1036,7 @@
     margin-top: 20px;
 
     grid-template-columns:
-      58px
-      1fr;
+      58px 1fr;
 
     gap: 14px;
   }
@@ -1180,8 +1129,7 @@
     justify-content: space-between;
 
     padding:
-      0 10px
-      0 16px;
+      0 10px 0 16px;
 
     gap: 10px;
 
@@ -1191,7 +1139,7 @@
   }
 
 
-  .featured-cta-button > span {
+  .featured-cta-button>span {
     width: 31px;
     height: 31px;
   }

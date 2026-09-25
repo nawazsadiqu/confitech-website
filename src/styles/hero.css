@@ -17,13 +17,11 @@
   isolation: isolate;
 
   background:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       #ffffff 0%,
       #ffffff 48%,
       #fbfefc 73%,
-      #f8fcfa 100%
-    );
+      #f8fcfa 100%);
 
   border-bottom:
     1px solid rgba(32, 37, 42, 0.07);
@@ -76,33 +74,25 @@
   pointer-events: none;
 
   background-image:
-    linear-gradient(
+    linear-gradient(rgba(67, 169, 118, 0.05) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
       rgba(67, 169, 118, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(67, 169, 118, 0.05) 1px,
-      transparent 1px
-    );
+      transparent 1px);
 
   background-size: 54px 54px;
 
   mask-image:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       transparent 0%,
       rgba(0, 0, 0, 0.35) 25%,
-      black 100%
-    );
+      black 100%);
 
   -webkit-mask-image:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       transparent 0%,
       rgba(0, 0, 0, 0.35) 25%,
-      black 100%
-    );
+      black 100%);
 }
 
 
@@ -120,8 +110,7 @@
   display: grid;
 
   grid-template-columns:
-    minmax(0, 0.92fr)
-    minmax(0, 1.08fr);
+    minmax(0, 0.92fr) minmax(0, 1.08fr);
 
   align-items: center;
 
@@ -275,17 +264,14 @@
   color: #ffffff;
 
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       #35ce78,
-      #28bd68
-    );
+      #28bd68);
 
   border: 1px solid transparent;
 
   box-shadow:
-    0 8px 20px
-    rgba(46, 204, 113, 0.17);
+    0 8px 20px rgba(46, 204, 113, 0.17);
 }
 
 
@@ -293,15 +279,12 @@
   transform: translateY(-2px);
 
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       #2ecc71,
-      #21b85f
-    );
+      #21b85f);
 
   box-shadow:
-    0 13px 27px
-    rgba(46, 204, 113, 0.23);
+    0 13px 27px rgba(46, 204, 113, 0.23);
 }
 
 
@@ -342,8 +325,7 @@
     rgba(46, 204, 113, 0.8);
 
   box-shadow:
-    0 10px 24px
-    rgba(28, 60, 42, 0.07);
+    0 10px 24px rgba(28, 60, 42, 0.07);
 }
 
 
@@ -452,8 +434,8 @@
 .hero-servers {
   width: 32%;
 
-  left: 5%;
-  top: 38%;
+  left: 15%;
+  top: 22%;
 
   z-index: 6;
 }
@@ -466,22 +448,22 @@
 .hero-monitor {
   width: 32%;
 
-  right: 2%;
-  top: 37%;
+  right: 4%;
+  top: 31%;
 
   z-index: 6;
 }
 
 
 /* ===================================================== */
-/* ANALYTICS                                             */
+/* ANALYTICS / TABLET                                    */
 /* ===================================================== */
 
 .hero-analytics {
   width: 23%;
 
-  left: 12%;
-  bottom: 1%;
+  left: 20%;
+  bottom: 17%;
 
   z-index: 7;
 }
@@ -495,7 +477,7 @@
   width: 23%;
 
   right: 20%;
-  bottom: 0;
+  bottom: 20%;
 
   z-index: 7;
 }
@@ -509,8 +491,7 @@
 
   .home-hero-container {
     grid-template-columns:
-      minmax(0, 0.95fr)
-      minmax(0, 1.05fr);
+      minmax(0, 0.95fr) minmax(0, 1.05fr);
 
     gap: 20px;
   }
@@ -559,20 +540,16 @@
     opacity: 0.16;
 
     mask-image:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         transparent 0%,
         black 30%,
-        transparent 100%
-      );
+        transparent 100%);
 
     -webkit-mask-image:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         transparent 0%,
         black 30%,
-        transparent 100%
-      );
+        transparent 100%);
   }
 
 
@@ -647,11 +624,9 @@
     overflow: hidden;
 
     background:
-      radial-gradient(
-        circle at 100% 45%,
+      radial-gradient(circle at 100% 45%,
         rgba(46, 204, 113, 0.07),
-        transparent 42%
-      ),
+        transparent 42%),
       #ffffff;
   }
 
@@ -683,28 +658,23 @@
     width: 100%;
 
     background-size:
-      38px
-      38px;
+      38px 38px;
 
     opacity: 0.09;
 
     mask-image:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         transparent 0%,
         black 20%,
         black 75%,
-        transparent 100%
-      );
+        transparent 100%);
 
     -webkit-mask-image:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         transparent 0%,
         black 20%,
         black 75%,
-        transparent 100%
-      );
+        transparent 100%);
   }
 
 
@@ -936,12 +906,11 @@
   .hero-servers {
     width: 25%;
 
-    left: 8%;
-    top: 39%;
+    left: 10%;
+    top: 34%;
 
     z-index: 6;
   }
-
 
   /* =================================================== */
   /* MONITOR                                             */
@@ -950,8 +919,8 @@
   .hero-monitor {
     width: 27%;
 
-    right: 6%;
-    top: 39%;
+    right: 7%;
+    top: 34%;
 
     z-index: 6;
   }
@@ -964,8 +933,8 @@
   .hero-analytics {
     width: 19%;
 
-    left: 15%;
-    bottom: 3%;
+    left: 23%;
+    bottom: 13%;
 
     z-index: 7;
   }
@@ -979,7 +948,7 @@
     width: 19%;
 
     right: 21%;
-    bottom: 2%;
+    bottom: 15%;
 
     z-index: 7;
   }

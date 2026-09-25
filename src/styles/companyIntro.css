@@ -5,48 +5,35 @@
 .company-intro {
   position: relative;
 
-  width: 100%;
-
-  padding: 115px 0 90px;
+  padding:
+    105px 0 80px;
 
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 6% 82%,
-      rgba(46, 204, 113, 0.085),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 94% 8%,
-      rgba(46, 204, 113, 0.08),
-      transparent 32%
-    ),
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       #ffffff 0%,
-      #fbfdfc 52%,
-      #ffffff 100%
-    );
+      #fbfdfc 100%);
 }
 
 
 /* ===================================================== */
-/* LARGE WATERMARK                                       */
+/* WATERMARK                                             */
 /* ===================================================== */
 
 .company-intro-watermark {
   position: absolute;
 
-  top: 6px;
+  top: 32px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
-  width: 100%;
+  z-index: 0;
 
   color:
-    rgba(30, 37, 34, 0.043);
+    rgba(32, 37, 42, 0.025);
 
   font-family:
     "Manrope",
@@ -59,9 +46,7 @@
 
   line-height: 1;
 
-  letter-spacing: -10px;
-
-  text-align: center;
+  letter-spacing: -9px;
 
   white-space: nowrap;
 
@@ -72,7 +57,7 @@
 
 
 /* ===================================================== */
-/* MAIN LAYOUT                                           */
+/* MAIN GRID                                             */
 /* ===================================================== */
 
 .company-intro-container {
@@ -83,75 +68,69 @@
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 0.85fr);
-
-  gap: 120px;
+    minmax(0, 1fr) minmax(390px, 0.82fr);
 
   align-items: start;
+
+  gap: 100px;
+
+  padding-bottom: 75px;
 }
 
 
 /* ===================================================== */
-/* LEFT SIDE                                             */
+/* LEFT                                                  */
 /* ===================================================== */
 
 .company-intro-left {
-  width: 100%;
+  min-width: 0;
 }
 
-
-/* LABEL */
 
 .company-intro-label {
   display: inline-block;
 
-  margin-bottom: 23px;
-
   color:
     var(--primary-dark);
 
-  font-size: 11px;
+  font-size: 9px;
 
   font-weight: 700;
 
-  line-height: 1;
-
-  letter-spacing: 1.8px;
+  letter-spacing: 1.7px;
 
   text-transform: uppercase;
 }
 
 
-/* ===================================================== */
-/* HEADING                                               */
-/* ===================================================== */
-
 .company-intro-left h2 {
   max-width: 650px;
 
-  margin: 0;
+  margin-top: 18px;
 
   color:
-    #20262b;
+    var(--heading);
 
   font-family:
     "Manrope",
     sans-serif;
 
   font-size:
-    clamp(49px, 4.5vw, 66px);
+    clamp(42px, 4.5vw, 62px);
 
   font-weight: 700;
 
-  line-height: 1.03;
+  line-height: 1.07;
 
-  letter-spacing: -3.7px;
+  letter-spacing: -3px;
 }
 
 
-.company-intro-left h2 > span {
+.company-intro-left h2 span {
   display: block;
+
+  color:
+    var(--heading);
 }
 
 
@@ -163,13 +142,11 @@
 }
 
 
-/* GREEN LINE */
-
 .company-intro-green-line {
-  width: 54px;
+  width: 50px;
   height: 3px;
 
-  margin-top: 30px;
+  margin-top: 23px;
 
   border-radius: 100px;
 
@@ -183,125 +160,80 @@
 /* ===================================================== */
 
 .company-intro-stat-card {
-  width: min(100%, 545px);
+  width: fit-content;
 
-  min-height: 132px;
+  min-width: 405px;
 
-  margin-top: 43px;
+  margin-top: 40px;
 
-  padding: 26px 31px;
+  padding:
+    17px 21px;
 
   display: grid;
 
   grid-template-columns:
-    68px
-    auto
-    1px
-    minmax(0, 1fr);
+    50px auto 1px minmax(175px, 1fr);
 
   align-items: center;
 
-  gap: 23px;
+  gap: 18px;
 
   border:
-    1px solid
-    rgba(32, 37, 42, 0.07);
+    1px solid rgba(32, 37, 42, 0.075);
 
   border-radius: 10px;
 
   background:
-    rgba(255, 255, 255, 0.9);
+    rgba(255, 255, 255, 0.88);
 
   box-shadow:
-    0 14px 40px
-    rgba(35, 50, 42, 0.055);
-
-  backdrop-filter:
-    blur(8px);
-
-  -webkit-backdrop-filter:
-    blur(8px);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    0 10px 30px rgba(29, 56, 42, 0.035);
 }
 
-
-.company-intro-stat-card:hover {
-  transform:
-    translateY(-4px);
-
-  border-color:
-    rgba(46, 204, 113, 0.2);
-
-  box-shadow:
-    0 20px 48px
-    rgba(35, 50, 42, 0.085);
-}
-
-
-/* ICON */
 
 .company-intro-stat-icon {
-  width: 68px;
-  height: 68px;
+  width: 48px;
+  height: 48px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  border-radius: 12px;
-
   color:
     var(--primary-dark);
 
+  border-radius: 8px;
+
   background:
-    linear-gradient(
-      145deg,
-      rgba(46, 204, 113, 0.13),
-      rgba(46, 204, 113, 0.045)
-    );
+    rgba(46, 204, 113, 0.08);
 }
 
 
-/* NUMBER */
-
 .company-intro-stat-number {
   color:
-    var(--primary);
+    var(--primary-dark);
 
   font-family:
     "Manrope",
     sans-serif;
 
-  font-size: 48px;
+  font-size: 37px;
 
   font-weight: 700;
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
-
-/* DIVIDER */
 
 .company-intro-stat-divider {
   width: 1px;
-  height: 45px;
+  height: 43px;
 
   background:
     rgba(32, 37, 42, 0.12);
-}
-
-
-/* CONTENT */
-
-.company-intro-stat-content {
-  min-width: 0;
 }
 
 
@@ -315,40 +247,34 @@
     "Manrope",
     sans-serif;
 
-  font-size: 16px;
+  font-size: 11px;
 
   font-weight: 700;
 
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 
 .company-intro-stat-content p {
-  margin-top: 9px;
+  margin-top: 5px;
 
   color:
-    var(--text);
+    var(--text-light);
 
-  font-size: 13px;
+  font-size: 9px;
 
   line-height: 1.5;
 }
 
 
 /* ===================================================== */
-/* RIGHT SIDE                                            */
+/* RIGHT                                                 */
 /* ===================================================== */
 
 .company-intro-right {
-  width: 100%;
-
-  max-width: 530px;
-
-  padding-top: 45px;
+  padding-top: 25px;
 }
 
-
-/* MAIN PARAGRAPH */
 
 .company-intro-lead {
   margin: 0;
@@ -356,93 +282,71 @@
   color:
     #3f4b45;
 
-  font-size: 17px;
+  font-size: 16px;
 
-  font-weight: 400;
-
-  line-height: 1.85;
-}
-
-
-/* SECOND PARAGRAPH */
-
-.company-intro-description {
-  margin-top: 28px;
-
-  color:
-    #606c66;
-
-  font-size: 15px;
+  font-weight: 500;
 
   line-height: 1.8;
 }
 
 
-/* ===================================================== */
-/* DISCOVER LINK                                         */
-/* ===================================================== */
+.company-intro-description {
+  margin-top: 20px;
+
+  color:
+    var(--text);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
 
 .company-intro-link {
-  position: relative;
-
   width: fit-content;
 
-  margin-top: 34px;
+  min-height: 42px;
 
-  padding-bottom: 6px;
+  margin-top: 27px;
+
+  padding:
+    0 17px;
 
   display: inline-flex;
 
   align-items: center;
+  justify-content: center;
 
-  gap: 11px;
+  gap: 9px;
 
   color:
+    #ffffff;
+
+  border-radius: 5px;
+
+  background:
     var(--primary-dark);
 
-  font-size: 14px;
+  font-size: 9px;
 
   font-weight: 700;
 
   transition:
-    gap 0.25s ease,
-    color 0.25s ease;
-}
-
-
-.company-intro-link::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-  height: 1px;
-
-  background:
-    rgba(46, 204, 113, 0.65);
-}
-
-
-.company-intro-link svg {
-  transition:
-    transform 0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 
 .company-intro-link:hover {
-  gap: 15px;
-
-  color:
-    #159c50;
-}
-
-
-.company-intro-link:hover svg {
   transform:
-    translateX(3px);
+    translateY(-2px);
+
+  background:
+    #087844;
+
+  box-shadow:
+    0 8px 18px rgba(19, 143, 78, 0.16);
 }
 
 
@@ -453,60 +357,44 @@
 .company-capabilities {
   position: relative;
 
-  z-index: 3;
-
-  width: 100%;
-
-  margin-top: 60px;
+  z-index: 2;
 
   display: grid;
 
   grid-template-columns:
-    repeat(5, 1fr);
+    repeat(5, minmax(0, 1fr));
 
   overflow: hidden;
 
   border:
-    1px solid
-    rgba(32, 37, 42, 0.07);
+    1px solid rgba(32, 37, 42, 0.075);
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   background:
-    rgba(255, 255, 255, 0.94);
+    rgba(255, 255, 255, 0.9);
 
   box-shadow:
-    0 12px 36px
-    rgba(34, 50, 41, 0.045);
+    0 8px 28px rgba(30, 46, 38, 0.03);
 }
 
-
-/* ===================================================== */
-/* CAPABILITY ITEM                                       */
-/* ===================================================== */
 
 .company-capability {
   position: relative;
 
-  min-height: 145px;
+  min-height: 105px;
 
-  padding: 25px 18px;
+  padding:
+    20px 19px;
 
   display: flex;
 
   flex-direction: column;
 
-  align-items: center;
   justify-content: center;
 
-  text-align: center;
-
   border-right:
-    1px solid
-    rgba(32, 37, 42, 0.08);
-
-  transition:
-    background 0.25s ease;
+    1px solid rgba(32, 37, 42, 0.075);
 }
 
 
@@ -515,49 +403,26 @@
 }
 
 
-.company-capability:hover {
-  background:
-    rgba(46, 204, 113, 0.025);
-}
-
-
-/* NUMBER */
-
 .company-capability-number {
-  width: 54px;
-  height: 52px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 10px;
-
   color:
     var(--primary-dark);
-
-  background:
-    rgba(46, 204, 113, 0.08);
 
   font-family:
     "Manrope",
     sans-serif;
 
-  font-size: 26px;
+  font-size: 10px;
 
   font-weight: 700;
 
-  line-height: 1;
-
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
 }
 
 
-/* TITLE */
-
 .company-capability strong {
-  margin-top: 14px;
+  max-width: 180px;
+
+  margin-top: 9px;
 
   color:
     var(--heading);
@@ -566,35 +431,22 @@
     "Manrope",
     sans-serif;
 
-  font-size: 13px;
+  font-size: 11px;
 
   font-weight: 700;
 
-  line-height: 1.3;
+  line-height: 1.45;
 }
 
 
-/* GREEN MICRO LINE */
-
 .company-capability-line {
-  width: 36px;
+  width: 26px;
   height: 2px;
 
   margin-top: 13px;
 
-  border-radius: 100px;
-
   background:
     var(--primary);
-
-  transition:
-    width 0.3s ease;
-}
-
-
-.company-capability:hover
-.company-capability-line {
-  width: 48px;
 }
 
 
@@ -602,255 +454,83 @@
 /* TABLET                                                */
 /* ===================================================== */
 
-@media (max-width: 900px) {
-
-  .company-intro {
-    padding:
-      95px 0
-      75px;
-  }
-
-
-  /* WATERMARK */
-
-  .company-intro-watermark {
-    top: 25px;
-
-    font-size:
-      clamp(90px, 17vw, 145px);
-
-    letter-spacing: -6px;
-  }
-
-
-  /* MAIN GRID */
+@media (max-width: 1000px) {
 
   .company-intro-container {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-  }
-
-
-  .company-intro-left {
-    max-width: 690px;
-  }
-
-
-  .company-intro-right {
-    max-width: 660px;
-
-    padding-top: 0;
-  }
-
-
-  .company-intro-left h2 {
-    max-width: 630px;
-
-    font-size:
-      clamp(46px, 7vw, 60px);
-  }
-
-
-  /* CAPABILITIES */
-
-  .company-capabilities {
     grid-template-columns:
-      repeat(5, 180px);
+      minmax(0, 1fr) minmax(330px, 0.85fr);
 
-    overflow-x: auto;
-
-    scrollbar-width: none;
+    gap: 55px;
   }
 
 
-  .company-capabilities::-webkit-scrollbar {
-    display: none;
+  .company-intro-stat-card {
+    min-width: 360px;
+
+    grid-template-columns:
+      45px auto 1px minmax(150px, 1fr);
+
+    gap: 14px;
   }
 
 
   .company-capability {
-    min-height: 130px;
+    padding:
+      18px 14px;
+  }
+
+
+  .company-capability strong {
+    font-size: 9.5px;
   }
 
 }
 
 
 /* ===================================================== */
-/* MOBILE                                                */
+/* MOBILE / SMALL TABLET                                 */
 /* ===================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
 
   .company-intro {
     padding:
-      72px 0
-      55px;
-
-    background:
-      radial-gradient(
-        circle at 0% 85%,
-        rgba(46, 204, 113, 0.07),
-        transparent 36%
-      ),
-      radial-gradient(
-        circle at 100% 8%,
-        rgba(46, 204, 113, 0.06),
-        transparent 38%
-      ),
-      #ffffff;
+      78px 0 58px;
   }
 
-
-  /* =================================================== */
-  /* WATERMARK                                           */
-  /* =================================================== */
 
   .company-intro-watermark {
-    top: 20px;
+    top: 45px;
 
-    left: 18px;
+    font-size: 92px;
 
-    width: auto;
-
-    transform: none;
-
-    color:
-      rgba(30, 37, 34, 0.038);
-
-    font-size: 78px;
-
-    letter-spacing: -4px;
-
-    text-align: left;
+    letter-spacing: -5px;
   }
 
-
-  /* =================================================== */
-  /* GRID                                                */
-  /* =================================================== */
 
   .company-intro-container {
     grid-template-columns: 1fr;
 
-    gap: 35px;
+    gap: 38px;
+
+    padding-bottom: 50px;
   }
 
-
-  /* =================================================== */
-  /* LABEL                                               */
-  /* =================================================== */
-
-  .company-intro-label {
-    margin-bottom: 15px;
-
-    font-size: 8px;
-
-    letter-spacing: 1.2px;
-  }
-
-
-  /* =================================================== */
-  /* HEADING                                             */
-  /* =================================================== */
 
   .company-intro-left h2 {
-    max-width: 350px;
+    max-width: 430px;
 
     font-size:
-      clamp(38px, 11vw, 47px);
+      clamp(37px, 8vw, 48px);
 
-    line-height: 1;
+    line-height: 1.05;
 
-    letter-spacing: -2.5px;
+    letter-spacing: -2px;
   }
 
-
-  .company-intro-green-line {
-    width: 42px;
-    height: 3px;
-
-    margin-top: 20px;
-  }
-
-
-  /* =================================================== */
-  /* STAT CARD                                           */
-  /* =================================================== */
-
-  .company-intro-stat-card {
-    width: 100%;
-
-    min-height: auto;
-
-    margin-top: 30px;
-
-    padding: 19px;
-
-    grid-template-columns:
-      50px
-      auto
-      minmax(0, 1fr);
-
-    gap: 13px;
-
-    border-radius: 9px;
-  }
-
-
-  .company-intro-stat-icon {
-    width: 50px;
-    height: 50px;
-
-    border-radius: 9px;
-  }
-
-
-  .company-intro-stat-icon svg {
-    width: 23px;
-    height: 23px;
-  }
-
-
-  .company-intro-stat-number {
-    font-size: 36px;
-  }
-
-
-  .company-intro-stat-divider {
-    display: none;
-  }
-
-
-  .company-intro-stat-content {
-    padding-left: 12px;
-
-    border-left:
-      1px solid
-      rgba(32, 37, 42, 0.1);
-  }
-
-
-  .company-intro-stat-content strong {
-    font-size: 12px;
-  }
-
-
-  .company-intro-stat-content p {
-    margin-top: 5px;
-
-    font-size: 9px;
-
-    line-height: 1.45;
-  }
-
-
-  /* =================================================== */
-  /* RIGHT CONTENT                                       */
-  /* =================================================== */
 
   .company-intro-right {
-    max-width: none;
+    max-width: 620px;
 
     padding-top: 0;
   }
@@ -864,75 +544,195 @@
 
 
   .company-intro-description {
-    margin-top: 18px;
-
-    font-size: 12px;
+    font-size: 11px;
 
     line-height: 1.72;
   }
 
 
-  .company-intro-link {
-    margin-top: 23px;
-
-    font-size: 11px;
-  }
-
-
-  /* =================================================== */
-  /* CAPABILITIES                                        */
-  /* =================================================== */
-
   .company-capabilities {
-    margin-top: 42px;
-
     grid-template-columns:
-      repeat(5, 145px);
-
-    border-radius: 8px;
-
-    overflow-x: auto;
-
-    scroll-snap-type: x proximity;
-
-    scrollbar-width: none;
-  }
-
-
-  .company-capabilities::-webkit-scrollbar {
-    display: none;
+      repeat(2, minmax(0, 1fr));
   }
 
 
   .company-capability {
-    min-height: 115px;
+    min-height: 95px;
 
-    padding: 18px 12px;
-
-    scroll-snap-align: start;
+    border-bottom:
+      1px solid rgba(32, 37, 42, 0.075);
   }
 
 
-  .company-capability-number {
-    width: 45px;
-    height: 43px;
+  .company-capability:nth-child(2n) {
+    border-right: 0;
+  }
 
-    border-radius: 8px;
 
-    font-size: 21px;
+  .company-capability:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+
+  .company-capability:last-child {
+    grid-column:
+      1 / -1;
+
+    border-top:
+      1px solid rgba(32, 37, 42, 0.075);
+
+    border-bottom: 0;
+  }
+
+}
+
+
+/* ===================================================== */
+/* MOBILE                                                */
+/* ===================================================== */
+
+@media (max-width: 600px) {
+
+  .company-intro-label {
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+
+  .company-intro-left h2 {
+    max-width: 340px;
+
+    font-size:
+      clamp(36px, 10.5vw, 45px);
+
+    letter-spacing: -2px;
+  }
+
+
+  .company-intro-green-line {
+    width: 40px;
+
+    margin-top: 18px;
+  }
+
+
+  .company-intro-stat-card {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 30px;
+
+    padding:
+      14px 13px;
+
+    grid-template-columns:
+      42px auto 1px minmax(0, 1fr);
+
+    gap: 11px;
+  }
+
+
+  .company-intro-stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .company-intro-stat-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .company-intro-stat-number {
+    font-size: 29px;
+  }
+
+
+  .company-intro-stat-divider {
+    height: 37px;
+  }
+
+
+  .company-intro-stat-content strong {
+    font-size: 9px;
+  }
+
+
+  .company-intro-stat-content p {
+    font-size: 7.5px;
+  }
+
+
+  .company-intro-lead {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+
+  .company-intro-description {
+    margin-top: 16px;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+  }
+
+
+  .company-intro-link {
+    min-height: 39px;
+
+    margin-top: 22px;
+
+    padding:
+      0 14px;
+
+    font-size: 8.5px;
+  }
+
+
+  .company-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+
+  .company-capability,
+  .company-capability:nth-child(2n),
+  .company-capability:nth-last-child(-n + 2),
+  .company-capability:last-child {
+    grid-column: auto;
+
+    min-height: 72px;
+
+    padding:
+      14px 16px;
+
+    border-right: 0;
+
+    border-top: 0;
+
+    border-bottom:
+      1px solid rgba(32, 37, 42, 0.075);
+  }
+
+
+  .company-capability:last-child {
+    border-bottom: 0;
   }
 
 
   .company-capability strong {
-    margin-top: 11px;
+    max-width: none;
 
-    font-size: 10px;
+    margin-top: 5px;
+
+    font-size: 9.5px;
   }
 
 
   .company-capability-line {
-    width: 29px;
-
     margin-top: 9px;
   }
 

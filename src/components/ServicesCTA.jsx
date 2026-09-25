@@ -78,8 +78,8 @@ const ServicesCTA = () => {
           <div className="services-cta-action">
 
             <p>
-              Talk to our experts and discover the right
-              solution for your business needs.
+              Talk to our team about the right integrated
+              technology solution for your business requirements.
             </p>
 
 

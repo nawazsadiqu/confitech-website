@@ -21,21 +21,17 @@
   --container: 1280px;
 
   --fade-green-right:
-    radial-gradient(
-      circle at 92% 18%,
+    radial-gradient(circle at 92% 18%,
       rgba(46, 204, 113, 0.1) 0%,
       rgba(46, 204, 113, 0.04) 26%,
-      transparent 53%
-    ),
+      transparent 53%),
     #ffffff;
 
   --fade-green-left:
-    radial-gradient(
-      circle at 5% 22%,
+    radial-gradient(circle at 5% 22%,
       rgba(46, 204, 113, 0.09) 0%,
       rgba(46, 204, 113, 0.035) 27%,
-      transparent 53%
-    ),
+      transparent 53%),
     #ffffff;
 }
 

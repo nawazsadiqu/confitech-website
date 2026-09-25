@@ -21,13 +21,13 @@ const Footer = () => {
           <div className="footer-brand">
 
             <Link to="/" className="footer-logo">
-              <img src="/images/confitech-logo.png" alt="Confitech"/>
+              <img src="/images/confitech-logo.png" alt="Confitech" />
             </Link>
 
             <p>
-              Reliable technology infrastructure, networking,
-              data centre, security and enterprise solutions
-              for modern businesses.
+              Integrated IT and communication solutions across
+              networking, security, data centre infrastructure,
+              audio visual systems and facilities automation.
             </p>
 
           </div>
@@ -57,23 +57,23 @@ const Footer = () => {
             <h4>Services</h4>
 
             <Link to="/services">
-              Structured Cabling
+              Networking Infrastructure
             </Link>
 
             <Link to="/services">
-              Data Center Solutions
+              Safety &amp; Security
             </Link>
 
             <Link to="/services">
-              CCTV & Access Control
+              Data Centre Infrastructure
             </Link>
 
             <Link to="/services">
-              IT Consulting
+              Audio Visual &amp; CWE
             </Link>
 
             <Link to="/services">
-              Cloud Support
+              Building Management &amp; Automation
             </Link>
 
           </div>
@@ -99,9 +99,9 @@ const Footer = () => {
               </span>
             </a>
 
-            <a href="tel:+96824613022">
+            <a href="tel:+96899443792">
               <Phone size={17} />
-              <span>+968 24613022</span>
+              <span>+968 9944 3792</span>
             </a>
 
             <a href="mailto:contact@confitech.co">

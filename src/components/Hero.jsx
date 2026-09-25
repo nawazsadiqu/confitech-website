@@ -68,7 +68,7 @@ const Hero = () => {
             className="home-hero-eyebrow"
             variants={itemVariants}
           >
-            TECHNOLOGY THAT MOVES BUSINESS FORWARD
+            INTEGRATED IT & COMMUNICATION SOLUTIONS
           </motion.span>
 
 
@@ -84,14 +84,14 @@ const Hero = () => {
 
 
           <motion.p
-            className="home-hero-description"
-            variants={itemVariants}
-          >
-            Confitech delivers secure, scalable and reliable technology
-            solutions across networking, data centres, security,
-            consulting and cloud infrastructure—helping organisations
-            operate and grow with confidence.
-          </motion.p>
+  className="home-hero-description"
+  variants={itemVariants}
+>
+  Confitech delivers integrated IT and communication solutions
+  across networking infrastructure, safety and security, data
+  centre infrastructure, audio visual systems and building
+  management automation—engineered and supported locally.
+</motion.p>
 
 
           <motion.div

@@ -1,8 +1,13 @@
-import { ArrowRight, ChartNoAxesCombined } from "lucide-react";
+import {
+  ArrowRight,
+  ChartNoAxesCombined,
+} from "lucide-react";
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import "../styles/companyIntro.css";
+
 
 const CompanyIntro = () => {
   const reveal = {
@@ -22,33 +27,40 @@ const CompanyIntro = () => {
     },
   };
 
+
   const capabilities = [
     {
       number: "01",
-      title: "Structured Cabling",
+      title: "Networking Infrastructure",
     },
+
     {
       number: "02",
-      title: "Data Centres",
+      title: "Safety & Security",
     },
+
     {
       number: "03",
-      title: "CCTV & Security",
+      title: "Data Centre Infrastructure",
     },
+
     {
       number: "04",
-      title: "IT Consulting",
+      title: "Audio Visual & CWE",
     },
+
     {
       number: "05",
-      title: "Cloud Support",
+      title: "Building Management & Automation",
     },
   ];
+
 
   return (
     <section className="company-intro">
 
       {/* LARGE BACKGROUND WATERMARK */}
+
       <motion.div
         className="company-intro-watermark"
         initial={{
@@ -66,8 +78,8 @@ const CompanyIntro = () => {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-      CONFITECH
-    </motion.div>
+        CONFITECH
+      </motion.div>
 
 
       <div className="container company-intro-container">
@@ -94,6 +106,7 @@ const CompanyIntro = () => {
 
           <h2>
             Technology that
+
             <span>
               keeps business moving
               <b>.</b>
@@ -146,11 +159,11 @@ const CompanyIntro = () => {
             <div className="company-intro-stat-content">
 
               <strong>
-                Core service areas
+                Core solution areas
               </strong>
 
               <p>
-                One dependable technology partner.
+                Integrated IT &amp; communication solutions.
               </p>
 
             </div>
@@ -186,19 +199,19 @@ const CompanyIntro = () => {
         >
 
           <p className="company-intro-lead">
-            Confitech helps organisations build and operate the reliable
-            technology foundations they depend on every day. From secure
-            infrastructure and high-performance networks to modern data
-            centres and resilient cloud platforms, we deliver solutions
-            designed for today—and ready for tomorrow.
+            Confitech is a technology-based IT and Communications Solutions
+            Provider and Systems Integrator established in 2013. We deliver
+            integrated IT and communication solutions across networking
+            infrastructure, safety and security, data centre infrastructure,
+            audio visual systems and building management automation.
           </p>
 
 
           <p className="company-intro-description">
-            Our team combines technical expertise with a consultative
-            approach, ensuring every solution is aligned with business
-            requirements, scalable for growth and supported with dependable
-            service.
+            We provide advanced and cost-effective technology solutions
+            engineered and supported locally for industries including Energy,
+            Utilities, Trading, Logistics, Telecommunications, Hospitality,
+            Government, Banking and Finance, Industrial and Health Care.
           </p>
 
 
@@ -287,5 +300,6 @@ const CompanyIntro = () => {
     </section>
   );
 };
+
 
 export default CompanyIntro;
