@@ -36,9 +36,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`site-header ${
-        scrolled ? "site-header-scrolled" : ""
-      }`}
+      className={`site-header ${scrolled ? "site-header-scrolled" : ""
+        }`}
     >
       <div className="container site-header-inner">
 
@@ -58,9 +57,8 @@ const Navbar = () => {
 
         {/* NAVIGATION */}
         <nav
-          className={`site-navigation ${
-            menuOpen ? "is-open" : ""
-          }`}
+          className={`site-navigation ${menuOpen ? "is-open" : ""
+            }`}
         >
           <NavLink to="/" onClick={closeMenu}>
             Home

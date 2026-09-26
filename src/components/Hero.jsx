@@ -84,14 +84,14 @@ const Hero = () => {
 
 
           <motion.p
-  className="home-hero-description"
-  variants={itemVariants}
->
-  Confitech delivers integrated IT and communication solutions
-  across networking infrastructure, safety and security, data
-  centre infrastructure, audio visual systems and building
-  management automation—engineered and supported locally.
-</motion.p>
+            className="home-hero-description"
+            variants={itemVariants}
+          >
+            Confitech delivers integrated IT and communication solutions
+            across networking infrastructure, safety and security, data
+            centre infrastructure, audio visual systems and building
+            management automation—engineered and supported locally.
+          </motion.p>
 
 
           <motion.div

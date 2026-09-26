@@ -19,103 +19,166 @@ import "../styles/partnersPage.css";
 const partners = [
   {
     number: "01",
-    name: "CommScope",
+    name: "Fortinet",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/commscope.png",
+    logo: "/images/partners/fortinet.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Cybersecurity and secure networking company delivering enterprise security, network protection, SASE and security operations solutions.",
   },
 
   {
     number: "02",
-    name: "Rittal",
+    name: "FEPX Labs",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/rittal.png",
+    logo: "/images/partners/fepx.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Workplace and workforce technology company delivering access control, time attendance, visitor management and intelligent security platforms.",
   },
 
   {
     number: "03",
-    name: "Matrix",
+    name: "Nx Witness",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/matrix-comsec.png",
+    logo: "/images/partners/nx-witness.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Network Optix video management platform for live surveillance, recording, analytics, remote access and scalable multi-site video management.",
   },
 
   {
     number: "04",
-    name: "A&T",
+    name: "Milesight",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/a-t.png",
+    logo: "/images/partners/milesight.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Technology provider delivering IoT sensing, video surveillance, intelligent traffic cameras and connected solutions for smart environments.",
   },
 
   {
     number: "05",
-    name: "BFT",
+    name: "Garrett",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/bft.png",
+    logo: "/images/partners/garrett.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Security screening technology manufacturer providing walk-through and handheld metal detection solutions for high-security environments.",
   },
 
   {
     number: "06",
-    name: "Optima",
+    name: "STid Security",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/optima.png",
+    logo: "/images/partners/stid-security.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Access-control security specialist providing secure readers, credentials and mobile identification technologies for people and vehicle access.",
   },
 
   {
     number: "07",
-    name: "UNV",
+    name: "CommScope",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/unv.png",
+    logo: "/images/partners/commscope.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Connectivity infrastructure brand providing fibre, structured cabling and network solutions for data centres, buildings and campus environments.",
   },
 
   {
     number: "08",
-    name: "TP-Link",
+    name: "Rittal",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/tp-link.png",
+    logo: "/images/partners/rittal.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Infrastructure specialist delivering enclosures, server racks, climate control and data-centre systems for industrial and IT environments.",
   },
 
   {
     number: "09",
-    name: "Ultima",
+    name: "Matrix",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/ultima.png",
+    logo: "/images/partners/matrix-comsec.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Security and telecom technology provider covering video surveillance, access control, time attendance and enterprise communication systems.",
   },
 
   {
     number: "10",
-    name: "PLANET",
+    name: "A&T",
     area: "BUSINESS ASSOCIATE",
-    logo: "/images/partners/planet.png",
+    logo: "/images/partners/a-t.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Audio visual and video collaboration specialist providing conferencing, professional cameras, recording and enterprise collaboration solutions.",
   },
 
   {
     number: "11",
+    name: "BFT",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/bft.png",
+    description:
+      "Automation technology manufacturer specialising in gate systems, traffic barriers, automatic bollards and controlled-access solutions.",
+  },
+
+  {
+    number: "12",
+    name: "Optima",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/optima.png",
+    description:
+      "Physical-security engineering company producing road blockers, bollards, gates, barriers, turnstiles and vehicle-access systems.",
+  },
+
+  {
+    number: "13",
+    name: "UNV",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/unv.png",
+    description:
+      "Global AIoT technology provider delivering video security, surveillance, display and control solutions for diverse industries.",
+  },
+
+  {
+    number: "14",
+    name: "TP-Link",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/tp-link.png",
+    description:
+      "Global networking technology provider offering Wi-Fi, switching, enterprise networking, smart-device and security solutions.",
+  },
+
+  {
+    number: "15",
+    name: "Ultima",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/ultima.png",
+    description:
+      "End-to-end structured cabling brand offering Cat5e, Cat6, Cat6A, fibre-optic and voice cabling systems and accessories.",
+  },
+
+  {
+    number: "16",
+    name: "PLANET",
+    area: "BUSINESS ASSOCIATE",
+    logo: "/images/partners/planet.png",
+    description:
+      "Enterprise and industrial networking brand providing IP networking, PoE, fibre and intelligent network infrastructure solutions.",
+  },
+
+  {
+    number: "17",
     name: "APC",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/apc.png",
     description:
-      "Technology brand listed among Confitech's Business Associates in the current company profile.",
+      "Schneider Electric brand providing UPS systems, racks, power distribution and physical infrastructure for IT and data-centre environments.",
   },
 ];
+
+const strategicPartner = {
+  name: "Technova",
+  location: "Sultanate of Oman",
+  logo: "/images/partners/technova.png",
+  website: "https://technovaom.com/",
+  description:
+    "Technova is an Oman-based strategic partner of Confitech.",
+};
 
 
 const capabilities = [
@@ -223,9 +286,10 @@ const Partners = () => {
             >
 
               <p>
-                Confitech&apos;s company profile lists established
-                Business Associates supporting its technology,
-                infrastructure, security and automation ecosystem.
+                Confitech works with established technology brands
+                and business associates across cybersecurity, networking,
+                video surveillance, data centre infrastructure,
+                access control and automation.
               </p>
 
 
@@ -235,7 +299,7 @@ const Partners = () => {
               <div className="partners-page-partner-count">
 
                 <strong>
-                  11
+                  17
                 </strong>
 
 
@@ -246,7 +310,7 @@ const Partners = () => {
                   </span>
 
                   <p>
-                    Listed in the current company profile.
+                    Current technology partners &amp; associates.
                   </p>
 
                 </div>
@@ -322,6 +386,129 @@ const Partners = () => {
 
         </section>
 
+        {/* ================================================= */}
+{/* STRATEGIC PARTNER                                 */}
+{/* ================================================= */}
+
+<section className="partners-strategic-section">
+
+  <div className="container">
+
+    <motion.div
+      className="partners-strategic-heading"
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.25,
+      }}
+      transition={{
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
+
+      <span className="partners-page-label">
+        STRATEGIC PARTNER
+      </span>
+
+      <h2>
+        Strategic collaboration
+        <span>
+          for technology growth
+          <b>.</b>
+        </span>
+      </h2>
+
+      <div className="partners-strategic-heading-line" />
+
+    </motion.div>
+
+
+    <motion.div
+      className="partners-strategic-card"
+      initial={{
+        opacity: 0,
+        y: 24,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{
+        duration: 0.65,
+        delay: 0.08,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
+
+      {/* LOGO */}
+
+      <div className="partners-strategic-logo">
+
+        <img
+          src={strategicPartner.logo}
+          alt={`${strategicPartner.name} logo`}
+        />
+
+      </div>
+
+
+      {/* CONTENT */}
+
+      <div className="partners-strategic-content">
+
+        <span className="partners-strategic-category">
+          STRATEGIC PARTNER
+        </span>
+
+        <h3>
+          {strategicPartner.name}
+        </h3>
+
+        <span className="partners-strategic-location">
+          {strategicPartner.location}
+        </span>
+
+        <p>
+          {strategicPartner.description}
+        </p>
+
+      </div>
+
+
+      {/* WEBSITE */}
+
+      <a
+        href={strategicPartner.website}
+        target="_blank"
+        rel="noreferrer"
+        className="partners-strategic-link"
+      >
+        Visit Website
+
+        <ArrowUpRight
+          size={17}
+          strokeWidth={1.8}
+        />
+      </a>
+
+    </motion.div>
+
+  </div>
+
+</section>
+
 
 
         {/* ================================================= */}
@@ -345,8 +532,8 @@ const Partners = () => {
 
                   <motion.article
                     className={`partners-page-card ${isLastOdd
-                        ? "is-last-odd"
-                        : ""
+                      ? "is-last-odd"
+                      : ""
                       }`}
                     key={partner.name}
                     initial={{

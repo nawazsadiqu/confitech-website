@@ -89,6 +89,57 @@ const capabilities = [
   },
 ];
 
+const majorClients = [
+  {
+    name: "MADAYN",
+    logo: "/images/clients/madayn.png",
+  },
+  {
+    name: "NOMAC",
+    logo: "/images/clients/nomac.png",
+  },
+  {
+    name: "ACWA Power",
+    logo: "/images/clients/acwa-power.png",
+  },
+  {
+    name: "KPMG",
+    logo: "/images/clients/kpmg.png",
+  },
+  {
+    name: "ABB",
+    logo: "/images/clients/abb.png",
+  },
+  {
+    name: "Switz Group",
+    logo: "/images/clients/switz-group.png",
+  },
+  {
+    name: "Galfar",
+    logo: "/images/clients/galfar.png",
+  },
+  {
+    name: "InterTech Oman",
+    logo: "/images/clients/intertech-oman.png",
+  },
+  {
+    name: "Alessa",
+    logo: "/images/clients/alessa.png",
+  },
+  {
+    name: "Omantel",
+    logo: "/images/clients/omantel.png",
+  },
+  {
+    name: "Muscat Finance",
+    logo: "/images/clients/muscat-finance.png",
+  },
+  {
+    name: "Talabat",
+    logo: "/images/clients/talabat.png",
+  },
+];
+
 
 const About = () => {
   return (
@@ -522,6 +573,130 @@ const About = () => {
           </div>
 
         </section>
+
+        {/* ================================================= */}
+{/* MAJOR CLIENTS                                     */}
+{/* ================================================= */}
+
+<section className="about-clients">
+
+  <div className="container">
+
+    {/* HEADER */}
+
+    <div className="about-clients-header">
+
+      <motion.div
+        className="about-clients-heading"
+        initial={{
+          opacity: 0,
+          y: 22,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.25,
+        }}
+        transition={{
+          duration: 0.6,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+
+        <span className="about-section-label">
+          MAJOR CLIENTS
+        </span>
+
+        <h2>
+          Trusted across
+          <span>
+            leading organisations
+            <b>.</b>
+          </span>
+        </h2>
+
+        <div className="about-green-line" />
+
+      </motion.div>
+
+
+      <motion.div
+        className="about-clients-intro"
+        initial={{
+          opacity: 0,
+          y: 22,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.25,
+        }}
+        transition={{
+          duration: 0.6,
+          delay: 0.08,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+
+        <p>
+          Confitech has delivered technology and infrastructure
+          solutions for organisations across energy, utilities,
+          government, finance, industrial and enterprise environments.
+        </p>
+
+      </motion.div>
+
+    </div>
+
+
+    {/* CLIENT LOGOS */}
+
+    <div className="about-clients-grid">
+
+      {majorClients.map((client, index) => (
+
+        <motion.div
+          className="about-client-item"
+          key={client.name}
+          initial={{
+            opacity: 0,
+            y: 18,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.15,
+          }}
+          transition={{
+            duration: 0.45,
+            delay: index * 0.04,
+          }}
+        >
+
+          <img
+            src={client.logo}
+            alt={`${client.name} logo`}
+            loading="lazy"
+          />
+
+        </motion.div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
