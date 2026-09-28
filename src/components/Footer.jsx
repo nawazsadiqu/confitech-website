@@ -6,7 +6,9 @@ import {
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
+
 import "../styles/footer.css";
+
 
 const Footer = () => {
   return (
@@ -16,13 +18,22 @@ const Footer = () => {
 
         <div className="footer-main">
 
-          {/* BRAND */}
+          {/* ================================================= */}
+          {/* BRAND                                             */}
+          {/* ================================================= */}
 
           <div className="footer-brand">
 
-            <Link to="/" className="footer-logo">
-              <img src="/images/confitech-logo.png" alt="Confitech" />
+            <Link
+              to="/"
+              className="footer-logo"
+            >
+              <img
+                src="/images/confitech-logo.png"
+                alt="Confitech"
+              />
             </Link>
+
 
             <p>
               Integrated IT and communication solutions across
@@ -33,64 +44,100 @@ const Footer = () => {
           </div>
 
 
-          {/* COMPANY */}
+
+          {/* ================================================= */}
+          {/* COMPANY                                           */}
+          {/* ================================================= */}
 
           <div className="footer-column">
 
-            <h4>Company</h4>
+            <h4>
+              Company
+            </h4>
 
-            <Link to="/about">About Confitech</Link>
 
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/about">
+              About
+            </Link>
 
-            <Link to="/partners">Partners</Link>
 
-            <Link to="/contact">Contact</Link>
+            <Link to="/portfolio">
+              Portfolio
+            </Link>
+
+
+            <Link to="/partners">
+              Partners
+            </Link>
+
+
+            <Link to="/contact">
+              Contact
+            </Link>
 
           </div>
 
 
-          {/* SERVICES */}
+
+          {/* ================================================= */}
+          {/* SERVICES                                          */}
+          {/* ================================================= */}
 
           <div className="footer-column">
 
-            <h4>Services</h4>
+            <h4>
+              Services
+            </h4>
 
-            <Link to="/services">
+
+            <Link to="/services#networking-infrastructure">
               Networking Infrastructure
             </Link>
 
-            <Link to="/services">
+
+            <Link to="/services#safety-security">
               Safety &amp; Security
             </Link>
 
-            <Link to="/services">
+
+            <Link to="/services#data-centre">
               Data Centre Infrastructure
             </Link>
 
-            <Link to="/services">
+
+            <Link to="/services#audio-visual-cwe">
               Audio Visual &amp; CWE
             </Link>
 
-            <Link to="/services">
+
+            <Link to="/services#building-management">
               Building Management &amp; Automation
             </Link>
 
           </div>
 
 
-          {/* CONTACT */}
+
+          {/* ================================================= */}
+          {/* CONTACT                                           */}
+          {/* ================================================= */}
 
           <div className="footer-column footer-contact">
 
-            <h4>Contact</h4>
+            <h4>
+              Contact
+            </h4>
+
 
             <a
               href="https://maps.google.com/?q=Azaiba,Oman"
               target="_blank"
               rel="noreferrer"
             >
-              <MapPin size={17} />
+              <MapPin
+                size={17}
+                strokeWidth={1.8}
+              />
 
               <span>
                 P.O. Box 2416, P.C 130
@@ -99,14 +146,32 @@ const Footer = () => {
               </span>
             </a>
 
+
             <a href="tel:+96899443792">
-              <Phone size={17} />
-              <span>+968 9944 3792</span>
+
+              <Phone
+                size={17}
+                strokeWidth={1.8}
+              />
+
+              <span>
+                +968 9944 3792
+              </span>
+
             </a>
 
+
             <a href="mailto:contact@confitech.co">
-              <Mail size={17} />
-              <span>contact@confitech.co</span>
+
+              <Mail
+                size={17}
+                strokeWidth={1.8}
+              />
+
+              <span>
+                contact@confitech.co
+              </span>
+
             </a>
 
           </div>
@@ -114,26 +179,61 @@ const Footer = () => {
         </div>
 
 
-        {/* BOTTOM */}
 
-        <div className="footer-bottom">
+       {/* ================================================= */}
+{/* BOTTOM                                            */}
+{/* ================================================= */}
 
-          <p>
-            © {new Date().getFullYear()} Confitech.
-            All Rights Reserved.
-          </p>
+<div className="footer-bottom">
 
-          <a href="#top">
-            Back to top
-            <ArrowUpRight size={15} />
-          </a>
+  {/* LEFT */}
 
-        </div>
+  <p className="footer-copyright">
+    © {new Date().getFullYear()} Confitech.
+    All Rights Reserved.
+  </p>
+
+
+  {/* CENTER - POWERED BY */}
+
+  <p className="footer-powered-by">
+
+    <span>
+      Powered by
+    </span>
+
+    <a
+      href="https://nexyossolutions.com"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Nexyos Solutions
+    </a>
+
+  </p>
+
+
+  {/* RIGHT */}
+
+  <a
+    href="#top"
+    className="footer-back-top"
+  >
+    Back to top
+
+    <ArrowUpRight
+      size={15}
+      strokeWidth={1.8}
+    />
+  </a>
+
+</div>
 
       </div>
 
     </footer>
   );
 };
+
 
 export default Footer;

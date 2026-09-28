@@ -21,21 +21,16 @@ import "../styles/servicesPage.css";
 
 const services = [
   {
+    id: "networking-infrastructure",
     number: "01",
-
     icon: Network,
-
     title: "Networking Infrastructure & Structured Cabling",
-
     intro:
       "Complete structured cabling and networking infrastructure solutions designed to support reliable voice, data, video and specialised communication systems across modern business environments.",
-
     image:
       "/images/services/structured-cabling-light.png",
-
     imageAlt:
       "Structured network cabling infrastructure",
-
     features: [
       "Structured Cabling Design & Installation",
       "Fibre Optic, Data Network & Ethernet Cabling",
@@ -47,21 +42,16 @@ const services = [
 
 
   {
+    id: "data-centre",
     number: "02",
-
     icon: Server,
-
     title: "Data Centre Solutions",
-
     intro:
       "End-to-end data centre infrastructure solutions covering site preparation, cooling, power, connectivity, monitoring, safety and integrated security for reliable critical environments.",
-
     image:
       "/images/services/data-center-light.png",
-
     imageAlt:
       "Modern data centre infrastructure",
-
     features: [
       "IT & Telecom Precision Cooling, Enclosures & Containment Systems",
       "UPS, Power Distribution, PDU, Electrical Works & Standby Emergency Power",
@@ -73,21 +63,16 @@ const services = [
 
 
   {
+    id: "raised-access-flooring",
     number: "03",
-
     icon: Layers3,
-
     title: "Raised Access Flooring",
-
     intro:
       "Complete supply and installation of raised access flooring systems for server rooms, office buildings and data centres, supporting organised and efficient infrastructure environments.",
-
     image:
       "/images/services/raised-access-floor-light.png",
-
     imageAlt:
       "Raised access flooring for data centre and server room",
-
     features: [
       "Wood Core Raised Access Floor",
       "Calcium Sulphate Raised Access Floor",
@@ -97,21 +82,16 @@ const services = [
 
 
   {
+    id: "safety-security",
     number: "04",
-
     icon: ShieldCheck,
-
     title: "Safety & Security Solutions",
-
     intro:
       "Design, engineering, supply, installation, testing, commissioning and maintenance of physical infrastructure security and life-safety solutions for projects of different sizes and requirements.",
-
     image:
       "/images/services/security-light.png",
-
     imageAlt:
       "Safety security CCTV and access control infrastructure",
-
     features: [
       "IP / Analog CCTV & Solar-Powered Independent Wireless CCTV Systems",
       "Access Control Systems, Turnstiles, Gate Barriers & Motorized Gates",
@@ -123,21 +103,16 @@ const services = [
 
 
   {
+    id: "time-attendance-access-control",
     number: "05",
-
     icon: ShieldCheck,
-
     title: "Time-Attendance & Access Control",
-
     intro:
       "Centralised attendance and enterprise access-control solutions designed to manage users, locations, shifts, devices and secure areas with real-time monitoring and scalable control.",
-
     image:
       "/images/services/time-attendance-access-control-light.png",
-
     imageAlt:
       "Time attendance and enterprise access control system",
-
     features: [
       "Centralised Multi-Location Attendance, Live Tracking & Real-Time Monitoring",
       "User-Wise Attendance Processing, Multiple Shifts & Overnight Shift Management",
@@ -149,21 +124,16 @@ const services = [
 
 
   {
+    id: "aidc-rfid",
     number: "06",
-
     icon: QrCode,
-
     title: "AIDC, Barcode & RFID Solutions",
-
     intro:
       "Business-enabling Automatic Identification and Data Capture solutions using barcode, RFID and mobile-computing technologies for efficient data capture and operational workflows.",
-
     image:
       "/images/services/aidc-barcode-rfid-light.png",
-
     imageAlt:
       "Barcode RFID and mobile computing technology",
-
     features: [
       "Barcode-Based Data Capture",
       "Application-Specific Mobile Computing",
@@ -174,21 +144,16 @@ const services = [
 
 
   {
+    id: "audio-visual-cwe",
     number: "07",
-
     icon: Monitor,
-
     title: "Audio Visual & Collaborative Working Environment",
-
     intro:
       "Audio Visual system integration and installation solutions designed to enhance communication, collaboration, presentation and learning environments across organisations.",
-
     image:
       "/images/services/audio-visual-cwe-light.png",
-
     imageAlt:
       "Audio visual collaborative working environment",
-
     features: [
       "Projection, LCD, Display & Digital Media Signage Solutions",
       "Sound Reinforcement, Local Audio Conferencing & Public Address",
@@ -200,21 +165,16 @@ const services = [
 
 
   {
+    id: "gate-automation",
     number: "08",
-
     icon: DoorOpen,
-
     title: "Automatic Gate Motors & Road Barriers",
-
     intro:
       "Automation solutions for controlled vehicle and pedestrian access, including gate systems, barriers, bollards and automated door solutions for commercial and infrastructure environments.",
-
     image:
       "/images/services/gate-motors-road-barriers-light.png",
-
     imageAlt:
       "Automatic gate motor and road barrier system",
-
     features: [
       "Electromechanical Automation Systems for Swing Gates",
       "Sliding Gate Automation Systems",
@@ -225,21 +185,16 @@ const services = [
 
 
   {
+    id: "building-management",
     number: "09",
-
     icon: Building2,
-
     title: "Building Management & Facilities Automation",
-
     intro:
       "Building management and facilities automation form part of Confitech's integrated technology and communication solutions portfolio for modern infrastructure environments.",
-
     image:
       "/images/services/building-management-automation-light.png",
-
     imageAlt:
       "Building management and facilities automation",
-
     features: [
       "Building Management Solutions",
       "Facilities Automation",
@@ -372,8 +327,9 @@ const Services = () => {
               return (
 
                 <motion.article
+                  id={service.id}
                   className="services-page-row"
-                  key={service.number}
+                  key={service.id}
                   initial={{
                     opacity: 0,
                     y: 30,

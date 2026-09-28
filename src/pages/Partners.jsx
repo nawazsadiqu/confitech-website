@@ -15,7 +15,6 @@ import Footer from "../components/Footer";
 
 import "../styles/partnersPage.css";
 
-
 const partners = [
   {
     number: "01",
@@ -45,7 +44,20 @@ const partners = [
   },
 
   {
-    number: "04",
+  number: "04",
+
+  name: "Ruijie Networks",
+
+  area: "BUSINESS ASSOCIATE",
+
+  logo: "/images/partners/ruijie.png",
+
+  description:
+    "ICT infrastructure and networking technology provider offering network devices, network security, cloud desktop and smart classroom solutions.",
+},
+
+  {
+    number: "05",
     name: "Milesight",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/milesight.png",
@@ -54,7 +66,7 @@ const partners = [
   },
 
   {
-    number: "05",
+    number: "06",
     name: "Garrett",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/garrett.png",
@@ -63,7 +75,7 @@ const partners = [
   },
 
   {
-    number: "06",
+    number: "07",
     name: "STid Security",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/stid-security.png",
@@ -72,7 +84,7 @@ const partners = [
   },
 
   {
-    number: "07",
+    number: "08",
     name: "CommScope",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/commscope.png",
@@ -81,7 +93,7 @@ const partners = [
   },
 
   {
-    number: "08",
+    number: "09",
     name: "Rittal",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/rittal.png",
@@ -90,7 +102,7 @@ const partners = [
   },
 
   {
-    number: "09",
+    number: "10",
     name: "Matrix",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/matrix-comsec.png",
@@ -99,7 +111,7 @@ const partners = [
   },
 
   {
-    number: "10",
+    number: "11",
     name: "A&T",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/a-t.png",
@@ -108,7 +120,7 @@ const partners = [
   },
 
   {
-    number: "11",
+    number: "12",
     name: "BFT",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/bft.png",
@@ -117,7 +129,7 @@ const partners = [
   },
 
   {
-    number: "12",
+    number: "13",
     name: "Optima",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/optima.png",
@@ -126,7 +138,7 @@ const partners = [
   },
 
   {
-    number: "13",
+    number: "14",
     name: "UNV",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/unv.png",
@@ -135,7 +147,7 @@ const partners = [
   },
 
   {
-    number: "14",
+    number: "15",
     name: "TP-Link",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/tp-link.png",
@@ -144,7 +156,7 @@ const partners = [
   },
 
   {
-    number: "15",
+    number: "16",
     name: "Ultima",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/ultima.png",
@@ -153,7 +165,7 @@ const partners = [
   },
 
   {
-    number: "16",
+    number: "17",
     name: "PLANET",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/planet.png",
@@ -162,7 +174,7 @@ const partners = [
   },
 
   {
-    number: "17",
+    number: "18",
     name: "APC",
     area: "BUSINESS ASSOCIATE",
     logo: "/images/partners/apc.png",
@@ -170,15 +182,6 @@ const partners = [
       "Schneider Electric brand providing UPS systems, racks, power distribution and physical infrastructure for IT and data-centre environments.",
   },
 ];
-
-const strategicPartner = {
-  name: "Technova",
-  location: "Sultanate of Oman",
-  logo: "/images/partners/technova.png",
-  website: "https://technovaom.com/",
-  description:
-    "Technova is an Oman-based strategic partner of Confitech.",
-};
 
 
 const capabilities = [
@@ -299,7 +302,7 @@ const Partners = () => {
               <div className="partners-page-partner-count">
 
                 <strong>
-                  17
+                  18
                 </strong>
 
 
@@ -385,131 +388,6 @@ const Partners = () => {
           </div>
 
         </section>
-
-        {/* ================================================= */}
-{/* STRATEGIC PARTNER                                 */}
-{/* ================================================= */}
-
-<section className="partners-strategic-section">
-
-  <div className="container">
-
-    <motion.div
-      className="partners-strategic-heading"
-      initial={{
-        opacity: 0,
-        y: 20,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.25,
-      }}
-      transition={{
-        duration: 0.6,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-    >
-
-      <span className="partners-page-label">
-        STRATEGIC PARTNER
-      </span>
-
-      <h2>
-        Strategic collaboration
-        <span>
-          for technology growth
-          <b>.</b>
-        </span>
-      </h2>
-
-      <div className="partners-strategic-heading-line" />
-
-    </motion.div>
-
-
-    <motion.div
-      className="partners-strategic-card"
-      initial={{
-        opacity: 0,
-        y: 24,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.2,
-      }}
-      transition={{
-        duration: 0.65,
-        delay: 0.08,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-    >
-
-      {/* LOGO */}
-
-      <div className="partners-strategic-logo">
-
-        <img
-          src={strategicPartner.logo}
-          alt={`${strategicPartner.name} logo`}
-        />
-
-      </div>
-
-
-      {/* CONTENT */}
-
-      <div className="partners-strategic-content">
-
-        <span className="partners-strategic-category">
-          STRATEGIC PARTNER
-        </span>
-
-        <h3>
-          {strategicPartner.name}
-        </h3>
-
-        <span className="partners-strategic-location">
-          {strategicPartner.location}
-        </span>
-
-        <p>
-          {strategicPartner.description}
-        </p>
-
-      </div>
-
-
-      {/* WEBSITE */}
-
-      <a
-        href={strategicPartner.website}
-        target="_blank"
-        rel="noreferrer"
-        className="partners-strategic-link"
-      >
-        Visit Website
-
-        <ArrowUpRight
-          size={17}
-          strokeWidth={1.8}
-        />
-      </a>
-
-    </motion.div>
-
-  </div>
-
-</section>
-
-
 
         {/* ================================================= */}
         {/* PARTNER LIST                                      */}
