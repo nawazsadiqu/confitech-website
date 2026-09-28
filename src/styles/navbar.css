@@ -65,15 +65,10 @@
 
 .site-logo {
   position: relative;
-
-  z-index: 1003;
-
+  z-index: 1;
   justify-self: start;
-
   display: inline-flex;
-
   align-items: center;
-
   width: 150px;
 }
 
@@ -81,12 +76,9 @@
 .site-logo img {
   width: 100%;
   height: auto;
-
   display: block;
-
   object-fit: contain;
 }
-
 
 /* ===================================================== */
 /* NAVIGATION                                            */
@@ -94,53 +86,35 @@
 
 .site-navigation {
   justify-self: center;
-
   display: flex;
-
   align-items: center;
-
   gap: 35px;
 }
 
-
 .site-navigation a {
   position: relative;
-
   padding: 28px 0;
-
   color: #343b38;
-
   font-size: 13px;
   font-weight: 500;
-
   line-height: 1;
-
   white-space: nowrap;
-
   transition:
     color 0.22s ease;
 }
-
 
 /* ACTIVE UNDERLINE */
 
 .site-navigation a::after {
   content: "";
-
   position: absolute;
-
   left: 50%;
   bottom: 17px;
-
   width: 0;
   height: 2px;
-
   transform: translateX(-50%);
-
   border-radius: 100px;
-
   background: var(--primary);
-
   transition:
     width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -153,7 +127,6 @@
 
 .site-navigation a.active {
   color: var(--heading);
-
   font-weight: 600;
 }
 
@@ -170,15 +143,10 @@
 
 .site-header-actions {
   position: relative;
-
   z-index: 1003;
-
   justify-self: end;
-
   display: flex;
-
   align-items: center;
-
   gap: 14px;
 }
 
@@ -187,31 +155,21 @@
 
 .site-header-cta {
   min-height: 44px;
-
   padding: 0 19px;
-
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
   border-radius: 10px;
-
   color: #ffffff;
-
   background:
     linear-gradient(135deg,
       #35cc78,
       #28bd68);
-
   font-size: 12px;
   font-weight: 700;
-
   box-shadow:
     0 7px 18px rgba(46, 204, 113, 0.16);
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
